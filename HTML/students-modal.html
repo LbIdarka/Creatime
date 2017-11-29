@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Ученики</title>
+	<link href="../Styles/prepro.css" rel="stylesheet" />
+	<link href="../Styles/perfect-scrollbar.css" rel="stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="../Scripts/perfect-scrollbar.jquery.js"></script>
+
+</head>
+
+<body>
+
+	<div class="personal-area-students">
+		<div class="sort-box">
+			<span class="sb-text">Сортировать по:</span>
+			<a href="#777" class="sb-link active">группе</a>
+			<a href="#777" class="sb-link">имени</a>
+			<a href="#777" class="sb-link">оставшемуся времени</a>
+		</div>
+
+		<div class="pas-admin-row">
+			<a href="#777" class="par-button">Новая группа</a>
+			<a href="#777" class="par-button-stat">Статистика по времени</a>
+			<div class="par-time-box">
+				<span class="ptb-text">Предупреждать, когда у ученика осталось:</span>
+				<input type="text" class="ptb-input">
+				<a href="#777" class="ptb-button">Ок</a>
+			</div>
+		</div>
+
+		<div class="group-box">
+			<div class="gb-header">
+				<span class="gh-name">Группа 1</span>
+				<a class="gh-time">05:42</a>
+				<span class="gh-text">На группу потрачено:</span>
+			</div>
+
+			<div class="student-card">
+				<div class="sc-top-position">
+					<div class="sc-img-box">
+						<img class="sc-img" src="../Content/Alex.jpg" alt="">
+					</div>
+					<span class="sc-name-1">Петр</span>
+					<span class="sc-name-2">Константинопольский</span>
+					<span class="sc-text">Осталось времени:</span>
+					<a class="sc-date">00:19</a>
+				</div>
+			</div>
+
+			<div class="student-card sc-position">
+				<div class="sc-top-position">
+					<div class="sc-img-box">
+						<img class="sc-img" src="../Content/Alex.jpg" alt="">
+					</div>
+					<span class="sc-name-1">Василий</span>
+					<span class="sc-name-2">Константинопольский</span>
+					<span class="sc-text">Осталось времени:</span>
+					<a class="sc-date">00:19</a>
+				</div>
+			</div>
+
+			<div class="student-card done">
+				<div class="sc-top-position">
+					<div class="sc-img-box">
+						<img class="sc-img" src="../Content/Alex.jpg" alt="">
+					</div>
+					<span class="sc-name-1">Петр</span>
+					<span class="sc-name-2">Константинопольский</span>
+					<span class="sc-text">Осталось времени:</span>
+					<a class="sc-date">00:00</a>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="group-box">
+			<div class="gb-header">
+				<span class="gh-name">Группа 2</span>
+				<a class="gh-time">05:42</a>
+				<span class="gh-text">На группу потрачено:</span>
+			</div>
+
+			<div class="student-card sc-open">
+				<div class="sc-top-position">
+					<span class="sc-upd">Изменил анкету</span>
+					<div class="sc-img-box">
+						<img class="sc-img" src="../Content/Alex.jpg" alt="">
+					</div>
+					<span class="sc-name-1">Василий</span>
+					<span class="sc-name-2">Константинопольский</span>
+					<span class="sc-text">Осталось времени:</span>
+					<a class="sc-date">00:19</a>
+					<div class="sc-center">
+						<a href="#777" class="sc-button-upd">Посмотреть изменения</a>
+						<div class="sc-check">
+							<input type="checkbox" class="scc-checkbox" />
+							<span class="scc-text">Просмотрено</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="student-card sc-position">
+				<div class="sc-top-position">
+					<div class="sc-img-box">
+						<img class="sc-img" src="../Content/Alex.jpg" alt="">
+					</div>
+					<span class="sc-name-1">Петр</span>
+					<span class="sc-name-2">Константинопольский</span>
+					<span class="sc-text">Осталось времени:</span>
+					<a class="sc-date">00:19</a>
+				</div>
+			</div>
+
+			<div class="student-card sc-open">
+				<div class="sc-top-position">
+					<span class="sc-upd-2">Запросил рекомендации</span>
+					<div class="sc-img-box">
+						<img class="sc-img" src="../Content/Alex.jpg" alt="">
+					</div>
+					<span class="sc-name-1">Василий</span>
+					<span class="sc-name-2">Константинопольский</span>
+					<span class="sc-text">Осталось времени:</span>
+					<a class="sc-date">00:19</a>
+					<div class="sc-center">
+						<a href="#777" class="sc-button-upd-2">Дать рекомендации</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="student-card">
+				<div class="sc-top-position">
+					<div class="sc-img-box">
+						<img class="sc-img" src="../Content/Alex.jpg" alt="">
+					</div>
+					<span class="sc-name-1">Петр</span>
+					<span class="sc-name-2">Константинопольский</span>
+					<span class="sc-text">Осталось времени:</span>
+					<a class="sc-date">00:19</a>
+				</div>
+			</div>
+
+			<div class="student-card sc-position">
+				<div class="sc-top-position">
+					<div class="sc-img-box">
+						<img class="sc-img" src="../Content/Alex.jpg" alt="">
+					</div>
+					<span class="sc-name-1">Петр</span>
+					<span class="sc-name-2">Константинопольский</span>
+					<span class="sc-text">Осталось времени:</span>
+					<a class="sc-date">00:19</a>
+				</div>
+			</div>
+
+			<div class="student-card">
+				<div class="sc-top-position">
+					<div class="sc-img-box">
+						<img class="sc-img" src="../Content/Alex.jpg" alt="">
+					</div>
+					<span class="sc-name-1">Петр</span>
+					<span class="sc-name-2">Константинопольский</span>
+					<span class="sc-text">Осталось времени:</span>
+					<a class="sc-date">00:19</a>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="fixed-overlay">
+			<div class="modal">
+				<div class="modal-time-stats modal-container">
+					<div class="modal-close"></div>
+					<h3 class="mts-title">Статистика времени</h3>
+					<div class="filter-tab">
+						<a href="#777" class="ft-link">По группам</a>
+						<a href="#777" class="ft-link">По ученикам</a>
+						<a href="#777" class="ft-link active">По месяцам</a>
+					</div>
+
+					<div class="mts-cut-box custom-scroll">
+<!-- диаграмма по месяцам -->
+						<div class="all-diagram-month">
+							<div class="data-center">
+								<spam class="diagram-value">14:09</spam>
+								<div class="diagram-column">
+									<div class="dc-fill"></div>
+								</div>
+							</div>
+							<div class="data-center">
+								<spam class="diagram-value">14:09</spam>
+								<div class="diagram-column">
+									<div class="dc-fill"></div>
+								</div>
+							</div>
+							<div class="data-center">
+								<spam class="diagram-value">14:09</spam>
+								<div class="diagram-column">
+									<div class="dc-fill"></div>
+								</div>
+							</div>
+							<div class="data-center">
+								<spam class="diagram-value">14:09</spam>
+								<div class="diagram-column">
+									<div class="dc-fill"></div>
+								</div>
+							</div>
+							<div class="data-center">
+								<spam class="diagram-value">14:09</spam>
+								<div class="diagram-column">
+									<div class="dc-fill"></div>
+								</div>
+							</div>
+							<div class="data-center">
+								<spam class="diagram-value">14:09</spam>
+								<div class="diagram-column">
+									<div class="dc-fill"></div>
+								</div>
+							</div>
+							<div class="data-center">
+								<spam class="diagram-value">14:09</spam>
+								<div class="diagram-column">
+									<div class="dc-fill"></div>
+								</div>
+							</div>
+							<div class="data-center">
+								<spam class="diagram-value">14:09</spam>
+								<div class="diagram-column">
+									<div class="dc-fill"></div>
+								</div>
+							</div>
+						</div>
+						<div class="all-date">
+							<div class="data-center">
+								<spam class="diagram-date-1">апрель</spam>
+								<spam class="diagram-date-2">2015</spam>
+							</div>
+							<div class="data-center">
+								<spam class="diagram-date-1">апрель</spam>
+								<spam class="diagram-date-2">2015</spam>
+							</div>
+							<div class="data-center">
+								<spam class="diagram-date-1">апрель</spam>
+								<spam class="diagram-date-2">2015</spam>
+							</div>
+							<div class="data-center">
+								<spam class="diagram-date-1">апрель</spam>
+								<spam class="diagram-date-2">2015</spam>
+							</div>
+							<div class="data-center">
+								<spam class="diagram-date-1">апрель</spam>
+								<spam class="diagram-date-2">2015</spam>
+							</div>
+							<div class="data-center">
+								<spam class="diagram-date-1">апрель</spam>
+								<spam class="diagram-date-2">2015</spam>
+							</div>
+							<div class="data-center">
+								<spam class="diagram-date-1">апрель</spam>
+								<spam class="diagram-date-2">2015</spam>
+							</div>
+							<div class="data-center">
+								<spam class="diagram-date-1">апрель</spam>
+								<spam class="diagram-date-2">2015</spam>
+							</div>
+						</div>
+					</div>
+
+					<div class="mts-cut-box custom-scroll">
+<!-- диаграмма по группам -->
+						<div class="all-diagram-groups">
+							<div class="data-item">
+								<span class="di-name">
+									<span class="di-accent">Группа 1</span> (Александр, Владислав, Елена)
+								</span>
+								<span class="di-time">05:42</span>
+								<div class="diagram-column-hor">
+									<div class="dch-fill"></div>
+								</div>
+							</div>
+
+							<div class="data-item">
+								<span class="di-name">
+									<span class="di-accent">Группа 2</span> (Антон, Антон, Антон)
+								</span>
+								<span class="di-time">05:42</span>
+								<div class="diagram-column-hor">
+									<div class="dch-fill"></div>
+								</div>
+							</div>
+
+							<div class="data-item">
+								<span class="di-name">
+									<span class="di-accent">Группа 3</span> (Михаил, Владислав, Елена)
+								</span>
+								<span class="di-time">05:42</span>
+								<div class="diagram-column-hor">
+									<div class="dch-fill"></div>
+								</div>
+							</div>
+
+							<div class="data-item">
+								<span class="di-name">
+									<span class="di-accent">Группа 3</span> (Михаил, Владислав, Елена)
+								</span>
+								<span class="di-time">05:42</span>
+								<div class="diagram-column-hor">
+									<div class="dch-fill"></div>
+								</div>
+							</div>
+
+							<div class="data-item">
+								<span class="di-name">
+									<span class="di-accent">Группа 3</span> (Михаил, Владислав, Елена)
+								</span>
+								<span class="di-time">05:42</span>
+								<div class="diagram-column-hor">
+									<div class="dch-fill"></div>
+								</div>
+							</div>
+							<div class="data-item">
+								<span class="di-name">
+									<span class="di-accent">Группа 3</span> (Михаил, Владислав, Елена)
+								</span>
+								<span class="di-time">05:42</span>
+								<div class="diagram-column-hor">
+									<div class="dch-fill"></div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="mts-cut-box">
+<!-- диаграмма по группам -->
+						<div class="all-diagram-students">
+
+							<div class="data-item-2">
+								<div class="di-student-box">
+									<div class="dsb-img-box">
+										<img class="dsb-img" src="../Content/Alex.jpg" alt="">
+									</div>
+									<span class="dsb-name-1">Василий</span>
+									<span class="dsb-name-2">Алексинский</span>
+								</div>
+								<span class="di2-time">05:42</span>
+								<div class="diagram-column-hor">
+									<div class="dch-fill"></div>
+								</div>
+							</div>
+
+							<div class="data-item-2">
+								<div class="di-student-box">
+									<div class="dsb-img-box">
+										<img class="dsb-img" src="../Content/Alex.jpg" alt="">
+									</div>
+									<span class="dsb-name-1">Василий</span>
+									<span class="dsb-name-2">Алексинский</span>
+								</div>
+								<span class="di2-time">05:42</span>
+								<div class="diagram-column-hor">
+									<div class="dch-fill"></div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(document).ready(function() {
+			$('.custom-scroll').perfectScrollbar();
+		});
+	</script>
+</body>
+
+</html>

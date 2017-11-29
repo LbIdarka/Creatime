@@ -1,0 +1,335 @@
+// _____________ Start courses page summary Serega_____________ //
+.course-cart {
+	padding-top: 30px;
+	&__text {
+		padding-left: 50px;
+        font: 16px/1.5 Arial, sans-serif;
+	}
+	&__header {
+		vertical-align: middle;
+		display: flex;
+		flex-wrap: nowrap;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		flex-direction: row;
+		-ms-flex-direction: row;
+		&_title {
+			font: bold 25px "FiraSans", sans-serif;
+			padding: 10px 5px 10px 0px;
+			display: inline-block;
+			margin: 0;
+			a {
+				color: #000;
+				//color: #F86005;
+				font-size: 0.7em;
+				font-weight: bold;
+				@extend %link-black;
+                    font: bold 18px/1.5 Arial, sans-serif;
+			}
+		}
+        &_link {
+            &s {
+                display: inline-block;
+                margin: auto 0;
+                padding: 10px;
+            }
+            &_comments {
+                font-size: 15px;
+                color: #000000;
+                text-decoration: underline;
+                padding-left: 25px;
+                &:before {
+                    content: '';
+                    @include sprite-comment-cloud;
+                    position: relative;
+                    left: -10px;
+                    vertical-align: middle;
+                }
+            }
+        }
+	}
+    &__footer {
+		background: #fff;
+		padding: 5px;
+		border: 2px solid #F86005;
+		margin-left: 50px;
+    }
+	&__state,
+	&__paytype{
+		display: inline-block;
+		margin-left: 5px;
+		vertical-align: middle;
+        padding-left: 12px;
+		line-height: 1.5;
+        &:before {
+			vertical-align: middle;
+			content: " ";
+            position: relative;
+            left: -12px;
+            top: -1px;
+		}
+	}
+	&__state {
+		width: 150px;
+		@include w767 {
+			width: 100%;
+			margin: 5px;
+		}
+        &.New:before {
+            @include sprite-eye-closed;
+		}
+        &.Opened:before,
+		&.InProcess:before {
+            @include sprite-eye;
+		}
+		&.Completed:before {
+            @include sprite-check-mark;
+		}
+	}
+	&__paytype {
+		width: 49%;
+		@include w767 {
+			width: 100%;
+			margin: 5px;
+		}
+		&.IsPay:before {
+            @include sprite-lock;
+		}
+		&.IsFree:before {
+            @include sprite-free;
+		}
+        &.Bought:before {
+            @include sprite-unlock;
+		}
+	}
+	&__button {
+		margin-left: 5px;
+		vertical-align: middle;
+		float: right;
+		@include w767 {
+			width: 100%;
+			margin: 15px 5px 5px;
+			float: none;
+		}
+        &_certificate {
+		    display: inline-block;
+		    margin-left: 5px;
+		    vertical-align: middle;
+            padding-left: 12px;
+		    line-height: 1.5;
+            &:before {
+                content: '';
+                @include sprite-certificate;
+                position: relative;
+                left: -10px;
+                vertical-align: middle;
+            }
+		    @include w767 {
+			    width: 100%;
+			    margin: 15px 5px 5px;
+		    }
+        }
+	}
+}
+.pay_button {
+	@extend .unstyle-link;
+	@extend .button-orange;
+	@extend .button-small;
+}
+
+.ui-dialog,
+.ui-dialog,
+.ui-widget,
+.ui-widget-content,
+.ui-corner-all,
+.foo,
+.ui-draggable,
+.ui-resizable {
+	background: #fff;
+}
+// _____________ End courses page summary Serega _____________  //
+//_______________ Start course page detail Serega ______________//
+.course-description {
+	img{
+		margin: 0 20px 20px 0;
+		max-width: 50%;
+	}
+	margin: 20px 0;
+	overflow: hidden
+
+}
+//_______________ End course page detail Serega _______________//
+// _____________ Start course detail Dima _____________ //
+.module-info-wrapper {
+	font-size: 13px;
+	background-color: white;
+	display: flex;
+	flex-flow: column;
+	.miw-item {
+		padding: 5px 10px;
+		@include w590 {
+			padding: 5px 0;
+		}
+	}
+	.miw-item-footer {
+		padding: 5px 10px;
+		&:before {
+			content: " ";
+	    width: 18px;
+	    height: 18px;
+	    display: inline-block;
+	    vertical-align: bottom;
+	    margin-right: 2px;
+		}
+	}
+
+
+	.miw-header {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		border-bottom: solid 3px #f1f1f1;
+		margin-bottom: 20px;
+		padding: 5px;
+		@include w590 {
+			flex-flow: column nowrap;
+		}
+		.miw-header-note {
+			display: flex;
+			display: -ms-flexbox;
+			flex-flow: row wrap;
+			justify-content: flex-start;
+			.miw-passage-time:before {
+                @include sprite-clock;
+    		    vertical-align: middle;
+    		    content: " ";
+			}
+			.miw-result:before {
+                @include sprite-result-star;
+    		    vertical-align: middle;
+    		    content: " ";
+			}
+		}
+		.miw-header-share {
+			flex: 1 0 auto;
+			text-align: right;
+			@include w590 {
+				text-align: left;
+			}
+			.miw-social-networks {
+				display: inline-block;
+			@include w590 {
+        padding: 5px 15px;
+			}
+			}
+		}
+	}
+	.progress-container {
+		padding: 0 15px;
+	}
+	.miw-footer {
+		margin-top: 10px;
+		padding: 5px;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		@include w941{
+			flex-flow: column wrap;
+		}
+		.miw-status:before {
+			display: none;
+		}
+		.miw-open-cases:before {
+            @include sprite-eye;
+		}
+		.miw-finish-cases:before {
+            @include sprite-check-mark;
+		}
+		.miw-succes-cases:before {
+            @include sprite-thumb;
+		}
+		.miw-get-brains:before {
+            @include sprite-brain;
+		}
+	}
+}
+.case-recomendations {
+	h5 {
+		color: black;
+		ont-weight: initial;
+	}
+}
+.all-cases-wrapper,
+.cases-in-process-wrapper,
+.case-recomendations-wrapper {
+	margin-top: 40px;
+}
+.cases-recomended {
+	padding-bottom: 20px;
+}
+// перенесено из statictic.css Димины
+.progress-dates-wrapper {
+	font-size: 13px;
+	margin-bottom: 20px;
+	border-bottom: solid 1px #f1f1f1;
+	padding: 0 10px 15px;
+	.start-date {
+		display: inline-block;
+		margin-right: 10px;
+	}
+	.end-date {
+		display: inline-block;
+	}
+}
+.progress-course {
+	height: 4px;
+	/*width:90%;*/
+	background: #F1F1F1;
+	margin: auto;
+	&.opened {
+		margin: 0;
+	}
+	&.completed {
+		background: #FF9B00;
+		margin: 0;
+		float: left;
+	}
+	&.completed:after {
+		content: "";
+        @include sprite-flag;
+		float: right;
+		position: relative;
+		top: -14px;
+		left: 11px;
+	}
+}
+// _____________ End course detail Dima_____________ //
+// _____________ Start courses page Dima_____________ //
+.courses-wrapper {
+	.course-wrapper {
+		padding-top: 20px;
+		.cw_subtitle {
+			margin: 0;
+			a {
+				color: black;
+				font-size: 0.7em;
+				font-weight: bold;
+			}
+		}
+		.module-detail-footer {
+			.module-state:before {
+				width: 35px;
+				display: inline-block;
+				vertical-align: middle;
+				content: " ";
+			}
+			.module-state.New:before {
+                @include sprite-eye-closed;
+			}
+			.module-state.Opened:before {
+                @include sprite-eye;
+			}
+		}
+	}
+}
+// _____________ End courses page Dima_____________ //

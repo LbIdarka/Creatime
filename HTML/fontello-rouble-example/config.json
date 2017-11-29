@@ -1,0 +1,16 @@
+{
+  "name": "rouble",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "243424d56528e83e4fe9ef6e6347a2ef",
+      "css": "rouble",
+      "code": 1088,
+      "src": "fontawesome"
+    }
+  ]
+}

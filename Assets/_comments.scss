@@ -1,0 +1,114 @@
+﻿.comments {
+    background-color: #FFFFFF;
+    font: normal 13px/1.5 "Arial", sans-serif;
+    padding: 20px 30px 10px 30px;
+    margin-bottom: 50px;
+}
+
+.comment {
+    padding-top: 10px;
+    border-bottom: 1px solid #9a9a9a;
+    &-text {
+        font-size: 15px;
+        padding-bottom: 15px;
+    }
+    &-info {
+        height: 75px;
+        font-size: 11px;
+    }
+    &-photo {
+        float:left;
+        padding-right:10px;
+        & > div {
+            background-size: cover;
+            height: 50px;
+            width: 50px;
+            border-radius: 25px;
+        }
+    }
+    &-date {
+        color: #666666;
+    }
+    &-text {
+        font-size: 15px;
+        padding-bottom: 15px;
+        & pre {
+            margin: 0;
+            font: normal 15px/1.5 "Arial", sans-serif;
+            white-space: pre-wrap;
+        }
+    }
+    &-textarea {
+        width: 100%;
+        height: 100px;
+        resize: none;
+    }
+    &-name-user {
+        width: 297px;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+        resize: none;
+    }
+    &-form fieldset {
+        display: none;
+    }
+    &-buttons {
+        margin-bottom: 30px;
+        padding-top: 25px;
+    }
+}
+
+span.status {
+    font-weight: 700;
+}
+
+.action-comments {
+    text-align: center;
+        &:first-child{
+        padding-right: 10px;
+    }
+}
+.action-solutions {
+    text-align: center;
+        &:first-child{
+        padding-right: 10px;
+    }
+}
+
+.creater-status {
+    font-weight: 700;
+}
+
+button.send-comment-text {
+    text-align: right;
+}
+
+.send-button-status button {
+    float: right;
+}
+
+.button-comment-text {
+    font-size: 15px;
+    color: #000000;
+    text-decoration: underline;
+    padding-left: 36px;
+    &:before {
+        content: '';
+        @include sprite-comment-cloud;
+        position: absolute;
+        left: -6px;
+        top: 0;
+        vertical-align: middle;
+    }
+}
+
+a.button-hide-comments, a.button-hide-solutions {
+    margin-right: 25px;
+    border-bottom: 1px dashed;
+    color:#000000;
+}
+
+a.button-hide-comments:hover, a.button-hide-solutions:hover {
+    border-bottom: 0;
+}
+

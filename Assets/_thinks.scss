@@ -1,0 +1,189 @@
+// Start edit profile sings//
+.sort.m-respons {
+	@include w516 {
+	align-items: flex-start;
+	-webkit-align-items: flex-start;
+	}
+
+	@include w516 {
+		flex-direction: column;
+	}
+	.button-sort {
+		@include w516 {
+			margin-top: 9px;
+		}
+	}
+	.href-sort {
+		@include w516 {
+			margin-top: 15px;
+			display: inline-block;
+		}
+	}
+}
+.button-copy-all,
+.button-print-all {
+	@extend .button-standart-2, .button-white-2;
+		@include w398 {
+			display: table;
+		}
+}
+.button-copy-all {
+	margin-right: 15px;
+		@include w398 {
+			margin: 0 0 15px;
+		}
+}
+.thinks-box {
+	border-top: solid 2px #D9D9D9;
+}
+.think-wrapper {
+	border-bottom: solid 2px #D9D9D9;
+	padding: 10px 0 25px;
+	.tw-header {
+		display: flex;
+		margin-top: 10px;
+	}
+    .tw-header.case-think-header {
+        display: inline-flex;
+        width: 100%;
+    }
+	button {
+		width: 13px;
+		background-repeat: no-repeat;
+		height: 13px;
+		background-color: transparent;
+		border: none;
+		background-size: contain;
+	}
+	.edit-bar {
+		position: relative;
+		button {
+			margin-left: 10px;
+		}
+	}
+    		button.button-remove,
+		button.button-close-edit {
+            @include sprite-close-big;
+			cursor: pointer;
+			&:hover {
+                @include sprite-close-big-hover;
+			}
+		}
+	.view-bar .vb-buttons {
+		display: inline-block;
+		margin-right: 12px;
+		button {
+			margin-left: 10px;
+		}
+		button.button-edit {
+            @include sprite-edit;
+			cursor: pointer;
+			&:hover {
+                @include sprite-edit-hover;
+			}
+			&.active {
+                @include sprite-edit-hover;
+			}
+            vertical-align:bottom;
+		}
+		button.button-copy {
+            @include sprite-copy;
+			cursor: pointer;
+			&:hover {
+                @include sprite-copy-hover;
+			}
+            vertical-align:bottom;
+		}
+		a.button-print {
+            @include sprite-print;
+			cursor: pointer;
+            margin-left:10px;
+			&:hover {
+                @include sprite-print-hover;
+			}
+            vertical-align:bottom;
+		}
+		.button-save {
+			// position: absolute;
+			// bottom: 0;
+			// background-image: url(../Content/save.png);
+            @include sprite-save;
+			cursor: pointer;
+			&:hover {
+                @include sprite-save-hover;
+			}
+            vertical-align:bottom;
+		}
+	}
+	textarea {
+		background-color: transparent;
+		border-bottom: none;
+	}
+}
+// think.css Антона
+.think-value {
+	border: none;
+	resize: none;
+	width: 100%;
+	max-width: 100%;
+	font: normal 15px/1.5 "Arial", sans-serif;
+    outline: 0 none transparent;
+}
+.think-value.edit {
+	height: 100px;
+	@extend .textarea-base;
+	margin-bottom: 10px;
+	min-height: 40px;
+}
+.think-date {
+	/*height: 30px;
+    float: left;*/
+	display: inline-block;
+	font: normal 15px/1 Arial, sans-serif;
+	color: #666;
+  vertical-align: bottom;
+}
+.view-bar,
+.edit-bar {
+	float: right;
+}
+.think-course-name,
+.think-case-name {
+	font-weight: bold;
+	width: auto;
+}
+.tw-footer {
+	display: inline-block;
+	width: 100%;
+	.twf-item {
+		display: inline-block;
+		font: 13px Arial, sans-serif;
+	}
+	.think-case-label {
+		color: #666;
+	}
+	.view-bar {
+		margin: 17px 0 0 10px;
+	}
+	.twf-module {
+		margin-bottom: 5px;
+	}
+}
+.button-bar {
+	margin: 30px 0;
+}
+.print-helper{
+    padding-bottom:20px;
+    white-space: pre-wrap;
+}
+
+/*@media print{
+    body{
+        line-height:1.7 !important;
+    }
+    .tw-footer{
+        line-height:0.9 !important;
+    }
+
+}*/
+//  End edit profile sings  //

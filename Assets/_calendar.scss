@@ -1,0 +1,492 @@
+#calendar {
+    position: relative;
+
+    .fc-time-grid .fc-slats td {
+        height: 2em;
+        span{
+            font-size:12px;
+        }
+    }
+
+    .fc-title {
+        /*white-space: nowrap;
+		overflow: hidden;*/
+        text-overflow: ellipsis;
+        font-weight: bold;
+        /*padding-left: 5px;*/
+        word-break: break-word;
+        overflow-y: hidden;
+    }
+
+    .fc-content {
+        /*display: flex;*/
+    }
+
+    .fc-head {
+        background-color: #fff;
+        thead{
+            font-size: 12px;
+        }
+    }
+
+    .fc-toolbar {
+        padding: 55px 12px 12px 12px;
+        margin: 0;
+        background-image: linear-gradient(transparent 35px, white 0px);
+        @include w468{
+            background-image: linear-gradient(transparent 46px, white 0px);
+        }
+        .fc-center {
+            @include w950 {
+                display: flex;
+
+                h2 {
+                    margin: 0 auto;
+                }
+            }
+
+            @include w873 {
+                display: inline-block;
+            }
+        }
+
+        .fc-center h2 {
+            font: bold 16px "Arial", sans-serif;
+        }
+
+        .fc-button-group {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            .fc-state-default {
+                font: normal 13px "Arial", sans-serif;
+                @extend .dotted-link;
+                color: #000;
+                display: inline-block;
+                margin-right: 10px;
+                background-color: transparent;
+                box-shadow: none;
+                border: 0;
+                background: none;
+
+                &:hover {
+                    color: #F86005;
+                }
+            }
+
+            .fc-state-active {
+                border-bottom: none;
+                padding: 6px 14px;
+                background: #fff;
+                border-radius: 12px;
+
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+
+        .fc-createButton-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            @extend .unstyle-link;
+            @extend .button-orange;
+            @extend .button-small;
+        }
+
+
+        .fc-prev-button {
+            color: #000;
+            border: 0;
+            box-shadow: 0;
+            box-shadow: none;
+            @include sprite-arrow-left;
+            margin-top: 1px;
+            @include w873 {
+                width: auto;
+            }
+
+            .fc-icon-left-single-arrow {
+                width: 100%;
+                top: 0;
+
+                @include w873 {
+                    display: none;
+                }
+            }
+
+            .fc-icon-left-single-arrow:after {
+                content: attr(after-data);
+                font: bold 15px/1 Arial, sans-serif;
+                margin: 0 !important;
+            }
+        }
+
+        .fc-next-button {
+            color: #000;
+            border: 0;
+            box-shadow: 0;
+            box-shadow: none;
+            background: none;
+            height: 1em;
+            width: 210px;
+            padding-left: 0;
+            margin-left: 0;
+            @include w873 {
+                width: auto;
+            }
+
+            .fc-icon-right-single-arrow {
+                @include sprite-arrow-right;
+                padding-right: 20px;
+                // margin-top: 4px;
+                position: absolute;
+                margin: 0 !important;
+                right: 0;
+                top: 0;
+            }
+        }
+
+        .fc-next-button:before {
+            content: attr(after-data);
+            font: bold 15px/1 Arial, sans-serif;
+            width: 100%;
+            vertical-align: top;
+
+            @include w873 {
+                display: none;
+            }
+        }
+    }
+
+    .webinar {
+        border: 0;
+        background-color: #F9D12F;
+        color: black;
+    }
+
+    .olympiad {
+        border: 0;
+        background-color: #FF9B00;
+        color: black;
+    }
+
+    .consultation {
+        border: 0;
+        background-color: #FF6100;
+        color: black;
+    }
+
+    .other {
+    }
+
+    .fc-day-number {
+        background-color: #fff;
+    }
+
+    .fc-day-grid-event {
+        min-height: 65px;
+        margin: 0;
+        border-radius: 0;
+        font: normal 12px Arial, sans-serif;
+
+        .fc-content {
+            padding: 5px;
+            white-space: normal;
+        }
+
+        .fc-time {
+            font-weight: normal;
+        }
+    }
+
+    .fc-axis {
+        background-color: #fff;
+    }
+
+    .fc-time:before {
+        content: "" !important;
+    }
+
+    .fc-widget-content {
+        cursor: pointer;
+    }
+
+    .fc-time.fc-widget-content {
+        cursor: default;
+    }
+}
+
+@media(max-width:474px) {
+    #calendar {
+        padding-top: 30px;
+
+        .fc-row.fc-week.fc-widget-content {
+            height: unset !important;
+        }
+
+        .fc-toolbar {
+            padding-top: 70px;
+        }
+
+        .fc-right .fc-createButton-button {
+            left: 0;
+            top: 45px;
+        }
+
+        .fc-day-grid-event {
+            min-height: 0;
+        }
+
+        .fc-icon-left-single-arrow:after {
+            display: none;
+        }
+
+        .fc-next-button:before {
+            display: none;
+        }
+
+        .fc-toolbar {
+            .fc-prev-button,
+            .fc-next-button {
+                width: 100%;
+            }
+
+            .fc-icon-right-single-arrow {
+                position: relative !important;
+            }
+        }
+
+        .fc-month-view {
+            .fc-content {
+                font-size: 0;
+            }
+
+            .fc-content {
+                width: 20px;
+                margin: auto;
+            }
+
+            .webinar {
+                padding-top: 12px;
+
+                > .fc-content {
+                    @include sprite-webinar;
+                }
+            }
+
+            .olympiad {
+                padding-top: 11px;
+
+                > .fc-content {
+                    @include sprite-olympiad;
+                }
+            }
+
+            .consultation {
+                padding-top: 9px;
+
+                > .fc-content {
+                    @include sprite-consultation;
+                }
+            }
+
+            .other {
+                > .fc-content {
+                }
+            }
+        }
+
+        .fc-agendaWeek-view {
+            .fc-head {
+                font-size: 14px;
+            }
+
+            .fc-content {
+                font-size: 0;
+            }
+
+            .fc-content {
+                width: 20px;
+                margin: auto;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+
+            .webinar {
+                > .fc-content {
+                    @include sprite-webinar;
+                }
+            }
+
+            .olympiad {
+                > .fc-content {
+                    @include sprite-olympiad;
+                }
+            }
+
+            .consultation {
+                > .fc-content {
+                    @include sprite-consultation;
+                }
+            }
+
+            .other {
+                > .fc-content {
+                }
+            }
+        }
+    }
+}
+
+.modal-new-event {
+    @extend .modal-shadow;
+    position: relative;
+    width: 515px;
+    padding: 40px 30px;
+    background: #fff;
+    display: inline-block; //выпилить
+    @include w480 {
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    .mne-label {
+        font: normal 13px/1 "Arial", sans-serif;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .mne-input {
+        @extend .input-base;
+        @extend %input32;
+        margin-bottom: 16px;
+        min-width: 185px;
+    }
+
+    .mne-select {
+        font: normal 13px/1 "Arial", sans-serif;
+        @extend .select-base;
+        @extend %select32;
+        min-width: 186px;
+        margin-bottom: 16px;
+    }
+
+    .mne-textarea {
+        @extend .textarea-base;
+        width: 100%;
+        height: 100px;
+
+        @include w480 {
+            margin-bottom: 15px;
+        }
+    }
+
+    .mne-time-row {
+        @extend .clearfix;
+        margin: 16px auto 15px;
+
+        @include w480 {
+            margin: 0 auto;
+        }
+
+        .mtr-label-date {
+            font: normal 13px/1 "Arial", sans-serif;
+            display: inline-block;
+            margin-right: 3px;
+
+            @include w480 {
+                display: block;
+                margin-bottom: 8px;
+            }
+        }
+
+        .mtr-input-date {
+            @extend .input-base;
+            @extend %input32;
+            width: 144px;
+
+            @include w480 {
+                margin-bottom: 16px;
+            }
+        }
+
+        .mtr-time {
+            float: right;
+
+            @include w480 {
+                float: none;
+            }
+        }
+
+        .mtr-time-2 {
+            float: none;
+        }
+
+        .mtr-label-time {
+            font: normal 13px/1 "Arial", sans-serif;
+            display: inline-block;
+            margin-right: 3px;
+
+            @include w480 {
+                display: block;
+                margin-bottom: 8px;
+            }
+        }
+
+        .mtr-input-time {
+            @extend .input-base;
+            @extend %input32;
+            width: 90px;
+
+            @include w480 {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    .mne-button-row {
+        text-align: right;
+        margin-top: 25px;
+
+        @include w480 {
+            margin-top: 5px;
+            text-align: left;
+        }
+    }
+
+    .mne-buton {
+        @extend .button-orange;
+        @extend .button-standart-2;
+    }
+
+    .event-duration-error {
+        display: block;
+        color: red;
+        padding-top: 10px;
+        font: normal 12px/1 "Arial", sans-serif;
+
+        @include w480 {
+            display: inline-block;
+            padding-left: 10px;
+        }
+    }
+
+    .event-title-error {
+        color: red;
+        font: normal 12px/1 "Arial", sans-serif;
+        padding-left: 10px;
+    }
+    #event-content{
+        padding: 0 15px 0 15px;
+    }
+    #event-title{
+        width: 100%
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Создать событие</title>
+	<link href="../Styles/prepro.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+	<div class="modal-new-event">
+		<div class="modal-close"></div>
+		<span class="mne-label">Название</span>
+		<input type="text" class="mne-input">
+		<span class="mne-label">Тип события</span>
+		<select class="mne-select">
+			<option>Вебинар</option>
+			<option>Да</option>
+		</select>
+		<span class="mne-label">Тема вебинара</span>
+		<textarea class="mne-textarea"> </textarea>
+		<div class="mne-time-row">
+			<span class="mtr-label-date">Дата</span>
+			<input id="event-date" type="date" class="mtr-input-date" value="2016-01-22">
+			<div class="mtr-time">
+				<span class="mtr-label-time">Время</span>
+				<input id="event-time" type="time" class="mtr-input-time" value="00:00">
+			</div>
+		</div> 
+
+		<div class="mne-time-row">
+			<div class="mtr-time">
+				<span class="mtr-label-time">Продолжительность</span>
+				<input id="event-duration" type="time" class="mtr-input-time" value="00:00">
+			</div>
+			<div class="mtr-time-2">
+				<span class="mtr-label-time">Напомнить за</span>
+				<input id="event-reminder" type="time" class="mtr-input-time" value="00:00">
+			</div>
+		</div>
+
+
+
+		<div class="mne-button-row">
+			<a href="#777" class="mne-buton">Отправить</a>
+		</div>
+	</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,518 @@
+﻿// _____________ Начало Стоимость курсов  _____________ //
+.price-title {
+    font: normal 25px/1 "GetVoIP Grotesque", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 62px;
+}
+
+.price-text {
+    display: block;
+    /*font: normal 14px/1.5 "Arial", sans-serif;*/
+    font: normal 16px/1.5 "Arial", sans-serif;
+    max-width: 795px;
+}
+
+.price-subtitle {
+    /*font: bold 16px/1.5 "FiraSans", sans-serif;*/
+    font: bold 18px/1.5 "FiraSans", sans-serif;
+    margin: 29px auto 18px;
+}
+.price-certificate {
+	vertical-align: middle;
+    @include sprite-certificate;
+}
+.price-table, .main-price-table {
+    // display: inline-block;
+    // font-size: 0;
+    max-width: 655px; //fix
+    margin-bottom: 15px;
+
+    .pt-header {
+        /*height: 50px;*/
+        display: flex;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        flex-direction: row;
+        -ms-flex-direction: row;
+        flex-wrap: nowrap;
+        .duration-status, .buy-type{
+            display: block;
+            font: normal 11px/1.3 "Arial", sans-serif;
+        }
+        .pt-col-1,
+        .pt-col-2,
+        .pt-col-3,
+        .pt-col-4,
+        .pt-col-5 {
+            background: #fff;
+            font: normal 16px/1 "Arial", sans-serif;
+        }
+        .pt-col-2,
+        .pt-col-3,
+        .pt-col-4,
+        .pt-col-5{
+             line-height: 30px;
+               @include w610 {
+                line-height: inherit;
+               }
+        }
+    }
+
+    .pt-row {
+        border-bottom: 1px solid #D9D9D9;
+        display: flex;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        flex-direction: row;
+        -ms-flex-direction: row;
+        flex-wrap: nowrap;
+        .pt-col-1,
+        .pt-col-2,
+        .pt-col-3,
+        .pt-col-4,
+        .pt-col-5{
+          position: relative;
+          >*{
+            position:absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+          }
+        }
+        .pt-relative
+        {
+          >*
+          {
+            position: relative !important;
+          }
+        }
+        .pt-price{
+          height: 57px;
+        }
+        .pt-mentor{
+          height:77px;
+        }
+    }
+
+    %pt-col {
+        position:relative;
+        display: inline-block;
+        vertical-align: top;
+        min-height: 50px;
+        padding: 16px 0;
+    }
+
+    .pt-col-1 {
+        @extend %pt-col;
+        min-width: 145px;
+        flex-basis: 145px;
+        -webkit-flex-basis: 145px;
+        // width: 205px;
+        text-align: left;
+        font: normal 16px/1 "Arial", sans-serif;
+        border-right: 2px solid #fff;
+        @include w610 {
+            //fix IE WinPhone
+            width: 200px;
+            flex-basis: 200px;
+            -webkit-flex-basis: 200px;
+            height: auto;
+        }
+    }
+
+    .pt-col-2 {
+        @extend %pt-col;
+        // width: 135px;
+        flex-basis: 138px;
+        -webkit-flex-basis: 138px;
+        text-align: center;
+        font: normal 13px/1.2 "Arial", sans-serif;
+        border-right: 2px solid #fff;
+
+        @include w610 {
+            //fix IE WinPhone
+            width: 170px;
+            flex-basis: 170px;
+            -webkit-flex-basis: 170px;
+            height: auto;
+        }
+    }
+
+    .pt-col-3 {
+        @extend %pt-col;
+        flex-basis: 199px;
+        -webkit-flex-basis: 198px;
+        width: 199px;
+        text-align: center;
+        font: normal 13px/1.2 "Arial", sans-serif;
+        border-right: 2px solid #fff;
+    }
+
+    .pt-col-4 {
+        @extend %pt-col;
+        flex-basis: 176px;
+        -webkit-flex-basis: 176px;
+        width: 144px;
+        text-align: center;
+        font: normal 13px/1.2 "Arial", sans-serif;
+        border-right: 2px solid #fff;
+        padding:16px 16px;
+    }
+
+    .pt-some {
+        margin-top: -5px;
+        display: inline-block;
+    }
+
+    .pt-yes {
+        @include sprite-plus-big;
+    }
+
+    .pt-no {
+        @include sprite-minus-big;
+    }
+
+    .side-border {
+        border-left: 4px solid #F86005 !important;
+        border-right: 4px solid #F86005 !important;
+
+        @include w610 {
+            border: none !important;
+        }
+    }
+
+    .top-border {
+        border-top: 4px solid #F86005 !important;
+
+        @include w610 {
+            border: none !important;
+        }
+    }
+
+    .bottom-border {
+        border-bottom: 4px solid #F86005 !important;
+
+        @include w610 {
+            border: none !important;
+        }
+    }
+
+    .col-price {
+        color: #F86005;
+        font: bold 18px "FiraSans", sans-serif;
+    }
+
+    .price-col {
+        cursor: pointer;
+    }
+    /*&.main-table{
+        .pt-col-1{
+            padding-left: 16px;
+        }
+         .side-border{
+             border: none !important;
+         }
+          .top-border{
+              border: none !important;
+          }
+          .bottom-border{
+              border: none !important;
+          }
+    }*/
+}
+
+.main-price-table {
+    .pt-col-1 {
+        padding-left: 16px;
+    }
+    .pt-header {
+        .pt-col-4 {
+            border: none;
+        }
+    }
+}
+
+.hidden-container {
+    display: none !important;
+}
+
+.price-table-courses {
+    // display: block;
+    // font-size: 0;
+    max-width: 879px;
+    margin-bottom: 34px;
+
+    .pt-header {
+        display: flex;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        flex-direction: row;
+        -ms-flex-direction: row;
+        flex-wrap: nowrap;
+
+        .pt-col-1,
+        .pt-col-2,
+        .pt-col-3,
+        .pt-col-4,
+        .pt-col-5 {
+            background: #fff;
+            border-right: 1px solid #EAEAEA;
+            font: normal 16px/1 "Arial", sans-serif;
+            margin: inherit;
+        }
+
+        .pt-col-5 {
+            border: none;
+        }
+    }
+
+    .pt-row {
+        border-bottom: 1px solid #D9D9D9;
+        display: flex;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        flex-direction: row;
+        -ms-flex-direction: row;
+        flex-wrap: nowrap;
+        max-width: 879px;
+
+        @include w484 {
+            max-width: 371px;
+        }
+    }
+
+    %pt-col-t2 {
+        display: inline-block;
+        vertical-align: top;
+        /*height: 50px;*/
+        padding: 16px 19px;
+        margin: auto;
+    }
+
+    .pt-col-1 {
+        @extend %pt-col-t2;
+        flex-basis: 369px;
+        -webkit-flex-basis: 369px;
+        // width: 369px;
+        text-align: left;
+        font: normal 16px/1 "Arial", sans-serif;
+
+        @include w484 {
+            width: 200px;
+            flex-basis: 200px;
+            -webkit-flex-basis: 200px;
+            height: auto;
+        }
+    }
+
+    .pt-col-2 {
+
+        @extend %pt-col-t2;
+        // width: 135px;
+        flex-basis: 170px;
+        -webkit-flex-basis: 170px;
+        text-align: center;
+        font: normal 11px/1.2 "Arial", sans-serif;
+    }
+
+    .pt-col-3 {
+        @extend %pt-col-t2;
+        // width: 170px;
+        flex-basis: 170px;
+        -webkit-flex-basis: 170px;
+        text-align: center;
+        font: normal 11px/1.2 "Arial", sans-serif;
+    }
+
+    .pt-col-4 {
+        @extend %pt-col-t2;
+        flex-basis: 170px;
+        -webkit-flex-basis: 170px;
+        // width: 144px;
+        text-align: center;
+        font: normal 11px/1.2 "Arial", sans-serif;
+    }
+
+    .pt-col-5 {
+        @extend %pt-col;
+        flex-basis: 176px;
+        -webkit-flex-basis: 176px;
+        width: 144px;
+        text-align: center;
+        font: normal 13px/1.2 "Arial", sans-serif;
+        border-right: 2px solid #fff;
+        padding: 16px 16px;
+    }
+
+    .pt-yes {
+        @include sprite-plus-big;
+    }
+
+    .pt-no {
+        @include sprite-minus-big;
+    }
+
+    .pt2-price {
+        font: bold 13px/1 "Arial", sans-serif;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:after {
+            @include sprite-basket;
+            content: "";
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+
+        &.mentor-disabled {
+            cursor: not-allowed !important;
+            pointer-events: none;
+
+            &:after {
+                @include sprite-basket-disabled;
+            }
+        }
+    }
+}
+
+.price-table-statuses {
+    // display: inline-block;
+    // font-size: 0;
+    max-width: 708px;
+
+    .pt-header {
+        display: flex;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        flex-direction: row;
+        -ms-flex-direction: row;
+        flex-wrap: nowrap;
+
+        .pt-col-1,
+        .pt-col-2 {
+            background: #fff;
+            //border-right: 1px solid #EAEAEA;
+            font: normal 16px/1 "Arial", sans-serif;
+        }
+
+        .pt-col-2 {
+            flex-basis: 550px;
+            -webkit-flex-basis: 550px;
+        }
+    }
+
+    .pt-row {
+        border-bottom: 1px solid #D9D9D9;
+        display: flex;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        flex-direction: row;
+        -ms-flex-direction: row;
+        flex-wrap: nowrap;
+        max-width: 708px;
+
+
+    }
+
+    %pt-col-3 {
+        display: inline-block;
+        vertical-align: top;
+        padding: 16px 19px;
+    }
+
+    .pt-col-1 {
+        @extend %pt-col-3;
+        min-width: 105px;
+        flex-basis: 158px;
+        -webkit-flex-basis: 158px;
+        text-align: left;
+        font: normal 16px/1 "Arial", sans-serif;
+    }
+
+    .pt-col-2 {
+        @extend %pt-col-3;
+        flex-basis: 550px;
+        -webkit-flex-basis: 550px;
+        text-align: left;
+        font: normal 16px/1.5 "Arial", sans-serif;
+    }
+}
+
+.price-achievements {
+    //внутренности модифицировались .mod-prices
+    margin: 22px auto 34px;
+    .pt-yes-certificate{
+      position: relative;
+      display: inline-block;
+      padding:15px;
+    }
+    /*.pt-yes-certificate:before{
+      content: '';
+      background: sprite($icons, plus-big) no-repeat;
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: 7px;
+    }*/
+}
+
+.price-link {
+    display: inline-block;
+    width: 100%;
+}
+
+.possibility-selector,
+.prices-selector, .main-possibility-selector {
+    cursor: pointer;
+    display: none;
+    width: 110px;
+    border: none;
+    @extend .select-base;
+    /*@extend %select32;*/
+    @include w610 {
+        display: block;
+        position: relative;
+        height: 23px;
+        font-size: 14px;
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+@media(max-width:610px) {
+    .price-table,
+    .price-table-courses, .main-price-table {
+        .status-level-title,
+        .pt-col-3,
+        .pt-col-4,
+        .pt-col-5 {
+            display: none;
+        }
+    }
+
+    .price-table, .main-price-table {
+        max-width: 355px;
+    }
+
+    .price-table-courses {
+        max-width: 539px;
+    }
+}
+
+@media(min-width:610px) {
+    .price-table,
+    .price-table-courses, .main-price-table {
+        .pt-col-2,
+        .pt-col-3,
+        .pt-col-4,
+        .pt-col-5 {
+            display: inline-block !important;
+        }
+    }
+}
+// _____________ Конец Стоимость курсов  _____________ //

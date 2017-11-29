@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Сообщения</title>
+	<link href="../Styles/prepro.css" rel="stylesheet" />
+	<link href="../Styles/perfect-scrollbar.css" rel="stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="../Scripts/perfect-scrollbar.jquery.js"></script>
+
+</head>
+
+<body>
+
+	<div class="personal-area-message">
+		<div class="back-to-list">
+			<a href="#777" class="btl-link">Вернуться к списку сообщений</a>
+			<a href="#777" class="btl-delete">удалить диалог</a>
+		</div>
+		<div class="send-box">
+			<div class="sb-admin-row">
+				<span class="sar-text">Участники:</span>
+				<div class="sar-member-box">
+					<span class="sar-member">Елена</span>
+					<span class="sar-member">Александр</span>
+				</div>
+				<a href="#777" class="sar-add">добавить</a>
+			</div>
+			<div class="sb-messages-box">
+				<div class="custom-scroll smb-scroll">
+					<div class="sb-message-row">
+						<div class="mr-people">
+							<div class="mrp-img-box">
+								<img class="mrp-img" src="../Content/Alex.jpg" alt="">
+							</div>
+							<span class="mrp-name-1">Елена</span>
+							<span class="mrp-name-2">Алексинский</span>
+							<span class="mrp-date">14.09.2015 в 14:40</span>
+						</div>
+
+						<div class="mr-subject new">
+							<span class="mrs-text">Как вы думаете, считается ли нормально усвоенным материал, если отметка за итоговые тесты «хорошо»?</span>
+						</div>
+					</div>
+
+					<div class="sb-message-row">
+						<div class="mr-people">
+							<div class="mrp-img-box">
+								<img class="mrp-img" src="../Content/Alex.jpg" alt="">
+							</div>
+							<span class="mrp-name-1">Александр</span>
+							<span class="mrp-name-2">Алексинский</span>
+							<span class="mrp-date">14.09.2015 в 14:40</span>
+						</div>
+
+						<div class="mr-subject new">
+							<span class="mrs-text">Считаю, здесь не может быть однозначного ответа</span>
+						</div>
+					</div>
+
+					<div class="sb-message-row">
+						<div class="mr-people">
+							<div class="mrp-img-box">
+								<img class="mrp-img" src="../Content/Alex.jpg" alt="">
+							</div>
+							<span class="mrp-name-1">Елена</span>
+							<span class="mrp-name-2">Алексинский</span>
+							<span class="mrp-date">14.09.2015 в 14:40</span>
+						</div>
+
+						<div class="mr-subject">
+							<span class="mrs-text">Считаю, здесь не может быть однозначного ответа</span>
+						</div>
+					</div>
+					<div class="sb-message-row">
+						<div class="mr-people">
+							<div class="mrp-img-box">
+								<img class="mrp-img" src="../Content/Alex.jpg" alt="">
+							</div>
+							<span class="mrp-name-1">Елена</span>
+							<span class="mrp-name-2">Алексинский</span>
+							<span class="mrp-date">14.09.2015 в 14:40</span>
+						</div>
+
+						<div class="mr-subject">
+							<span class="mrs-text">Считаю, здесь не может быть однозначного ответа</span>
+						</div>
+					</div>
+					<div class="sb-message-row">
+						<div class="mr-people">
+							<div class="mrp-img-box">
+								<img class="mrp-img" src="../Content/Alex.jpg" alt="">
+							</div>
+							<span class="mrp-name-1">Елена</span>
+							<span class="mrp-name-2">Алексинский</span>
+							<span class="mrp-date">14.09.2015 в 14:40</span>
+						</div>
+
+						<div class="mr-subject">
+							<span class="mrs-text">Считаю, здесь не может быть однозначного ответа</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sb-textarea-box">
+				<textarea name="" id="" cols="30" rows="10" class="sb-textarea"></textarea>
+			</div>
+			<div class="sb-send-row">
+				<div class="ssr-filename-box">
+					<span class="ssr-filename">photo.jpg</span>
+				</div>
+				<a class="ssr-add-file">Прикрепить файл</a>
+				<a href="#777" class="ssr-button">Отправить</a>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function() {
+			$('.custom-scroll').perfectScrollbar();
+		});
+	</script>
+
+</body>
+
+</html>

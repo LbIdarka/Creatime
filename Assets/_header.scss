@@ -1,0 +1,417 @@
+.navbar-wrapper {
+	background-color: #fff;
+	box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3);
+	z-index: 1;
+	position: relative;
+}
+
+.course-modal-text.header-container {
+    text-align:center;
+}
+
+.header-container {
+	//не вынимать из обертки, у бокового меню такие же классы
+	@extend .clearfix;
+	.navbar {
+        width: 100%;
+		box-shadow: none;
+		display: inline-block;
+		.logo-container {
+            display: inline-block;
+			width: 220px;
+            padding-top: 27px;
+		    @include w540 {
+                padding-top: 22px;
+		    }
+		    @include w408 {
+                padding-top: 27px;
+		    }
+			.logo {
+				margin-bottom: 14px;
+			    & > img {
+				    @include w408 {
+					    width: 70%;
+					    height: auto;
+					    display: inline-block;
+				    }
+			    }
+			}
+		}
+		.navbar-header {
+			position: relative;
+			// float: right;
+			// margin-top: -26px;
+			// margin-right: -53px;
+			z-index: 20;
+			display: none;
+			@include w792 {
+				display: inline-block;
+			}
+			@include w408 {
+				margin-top: -22px;
+				margin-right: 20px;
+			}
+			.navbar-toggle {
+                @include sprite-header-menu;
+				vertical-align: middle;
+				position: absolute;
+				top: -39px;
+				left: 233px;
+				@include w408 {
+					top: -36px;
+					left: 163px;
+				}
+			}
+		}
+		.navbar-collapse {
+			padding-top: 3px;
+			overflow-x: visible;
+			border-top: 1px solid transparent;
+			box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+			-webkit-overflow-scrolling: touch;
+			@include w792 {
+				width: auto;
+				border-top: 0;
+				box-shadow: none;
+			}
+			&.in {
+				overflow-y: auto;
+				// margin-bottom: 15px;
+			}
+			.zone-navigation {
+	            @extend .clearfix;
+				margin-top: 10px;
+				@include w792 {
+					margin-top: 0;
+				}
+				.widget-navigation {
+					display: inline-block;
+					vertical-align: middle;
+					// float: left;
+				}
+                .widget-navigation li {
+					text-transform: uppercase;
+				}
+
+                .widget-menu-widget{
+                    float: left;
+                }
+
+				.widget-html-widget {
+					padding-top: 9px;
+                    padding-right: 24px;
+                    float: right;
+					display: inline-block;
+					/*@include w992 {settings
+						position: absolute;
+						top: 30px;
+						left: 314px;
+					}*/
+					@include w792 {
+						position: relative;
+						top: 0;
+						left: 0;
+						display: block;
+						margin-bottom: 15px;
+					}
+					// @include w792 {
+					// 	padding-top: 0;
+					// 	display: block;
+					// 	float: none;
+					// }
+					#search-text {
+						width: 170px;
+						border-width: 0 0 2px 0;
+						border-style: solid;
+						border-color: #dedede;
+						font: normal 15px/1 "Arial", sans-serif;
+						padding: 2px;
+						outline: none;
+					}
+				}
+			}
+			.navbar-nav {
+				margin: 0;
+				padding-left: 0;
+				list-style: none;
+				display: inline-block;
+				li {
+					position: relative;
+					display: block;
+					float: left;
+					@include w792 {
+						float: none;
+					}
+				}
+				li > a {
+					font: bold 16px "FiraSans", sans-serif;
+					position: relative;
+					display: block;
+					padding: 10px 33px 10px 0;
+					color: #000;
+					&:hover {
+						color: #F86005;
+					}
+				}
+				.active a {
+					color: #F86005;
+				}
+				.first a {
+					padding-left: 0;
+				}
+				.last a {
+					padding-right: 0;
+				}
+			}
+		}
+	}
+}
+
+.navbar-collapse {
+	&.collapse {
+		display: none;
+	}
+	&.collapse.in {
+		display: block;
+		.widget-html-navigation {
+			@include w792 {
+				float: none;
+			}
+		}
+	}
+	&.collapsing {
+		position: relative;
+		height: 0;
+		overflow: hidden;
+		-webkit-transition-property: height, visibility;
+		transition-property: height, visibility;
+		-webkit-transition-duration: 0.35s;
+		transition-duration: 0.35s;
+		-webkit-transition-timing-function: ease;
+		transition-timing-function: ease;
+	}
+}
+@media (min-width: 793px) {
+	.navbar-collapse.collapse {
+		display: block;
+		// display: block !important;
+		// height: auto !important;
+		// padding-bottom: 0;
+		// overflow: visible !important;
+	}
+	// .navbar-collapse.in {
+	// 	overflow-y: visible;
+	// }
+}
+// @media (min-width: 793px) {
+// 	.navbar-nav > li {
+// 		float: left;
+// 	}
+// }
+// .yamm .nav,
+.yamm .collapse {
+	position: static;
+}
+// .zone-navigation article {
+// 	padding: 0;
+// 	margin: 0;
+// }
+// _____________ Start Login _____________ //
+.zone-user {
+	display: inline-block;
+	float: right;
+	margin-left: auto;
+	background: #F4F4F4;
+	padding-bottom: 0;
+    .modal-login {
+        z-index: 1;
+    }
+}
+.login-box {
+	display: inline-block;
+	/*padding: 15px 15px 15px 19px;*/
+    padding: 7px 20px;
+	background: #F4F4F4;
+	box-sizing: border-box;
+	vertical-align: middle;
+	@include w540 {
+		width: 77px;
+		height: 75px;
+		padding: 12px 6px;
+		text-align: center;
+		min-height: auto;
+	}
+    .is_logged {
+        min-height: 58px;
+    	width: 350px;
+		@include w792 {
+            min-height: 75px;
+        	width: auto;
+		}
+    }
+    .is_not_logged {
+    	width: 200px;
+        display:inline-block;
+		margin-top: 27px;
+		padding-left: 60px;
+		box-sizing: border-box;
+		@include w792 {
+		    margin-top: 46px;
+		}
+		@include w540 {
+        	width: auto;
+			margin-top: 0;
+			padding-left: 0;
+		}
+    }
+	// @include w767 {
+	//   width: 100%;
+	//   float: none;
+	//   margin: 0;
+	// }
+	//______________ Logged State
+	.lb-profile-link {
+		@extend .unstyle-link;
+	}
+	.lb_avatar {
+		display: inline-block;
+		width: 47px;
+		height: 47px;
+		/*margin-right: 9px;*/
+        margin-right: 5px;
+		border-radius: 28px;
+		vertical-align: middle;
+		@include w540 {
+			margin-right: 0;
+		}
+	}
+	.lb_name {
+		/*font: normal 13px Arial, sans-serif;*/
+        font: normal 11.6px Arial, sans-serif;
+		color: #000000;
+		vertical-align: middle;
+		display: inline-block;
+		/*max-width: 104px;*/
+        max-width: 134px;
+		@extend .text-cut;
+		@include w700 {
+			display: none;
+		}
+	}
+    .user-actions {
+        float: right;
+        margin-top: 18px;
+    }
+	.lb_logout {
+        @include sprite-close;
+		margin: 3px auto auto 1px;
+		vertical-align: middle;
+        margin-left: 3px;
+		@include w540 {
+			display: none;
+		}
+	}
+	.lb-option {
+	    display: inline-block;
+		text-align: center;
+		margin-top: 19px;
+		@include w540 {
+			display: none;
+		}
+        & > a {
+            margin: auto 4px;
+        }
+	}
+	.lb_messages {
+		position: relative;
+        @include sprite-messages;
+		vertical-align: middle;
+		&:hover {
+            @include sprite-messages-hover;
+		}
+	}
+
+    .lb_answers {
+		position: relative;
+        @include sprite-answer;
+		vertical-align: middle;
+		&:hover {
+            @include sprite-answer-hover;
+		}
+    }
+	.lb_counter {
+		position: absolute;
+		top: -12px;
+		right: -10px;
+        height: 17px;
+        line-height: 11px;
+		@extend %counter;
+	}
+	.lb_settings {
+        @include sprite-setting;
+		vertical-align: middle;
+		&:hover {
+            @include sprite-setting-hover;
+            height: 19px;
+            width: 19px;
+		}
+	}
+	.lb_bookmark {
+        @include sprite-star;
+		// margin-left: 5px;
+		vertical-align: middle;
+		margin-bottom: 2px;
+		&:hover {
+            @include sprite-star-hover;
+		}
+	}
+	.lb_singin {
+		position: relative;
+		font: normal 13px/1 "Arial", sans-serif;
+		margin-right: 11px;
+		@extend .dotted-link;
+		@extend %link-black;
+		@include w540 {
+			font-size: 0;
+		}
+	}
+	.lb_icon-key:before {
+		content: '';
+        @include sprite-singin;
+		position: absolute;
+		left: -38px;
+        top: -1px;
+		@include w540 {
+			top: -15px;
+			left: -5px;
+		}
+	}
+	.lb-line:after {
+		content: '|';
+		height: 14px;
+		width: 24px;
+		display: inline-block;
+		position: absolute;
+		right: -27px;
+		top: 1px;
+	}
+	.lb_register {
+		position: relative;
+		font: normal 13px Arial, sans-serif;
+		@extend .dotted-link;
+		@extend %link-black;
+		@include w540 {
+			font-size: 0;
+		}
+		&:before {
+			@include w540 {
+				content: '';
+                @include sprite-singup;
+				position: absolute;
+				left: -15px;
+				top: 15px;
+			}
+		}
+	}
+}
+// _____________ End Login _____________ //

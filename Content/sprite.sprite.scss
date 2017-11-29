@@ -1,0 +1,615 @@
+/*
+@import this file directly into your existing Scss files to use these mixins
+*/
+@mixin sprite-add-comment() {
+	width: 11px;
+	height: 12px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -10px no-repeat;
+}
+@mixin sprite-answer-hover() {
+	width: 19px;
+	height: 19px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -32px no-repeat;
+}
+@mixin sprite-answer() {
+	width: 19px;
+	height: 19px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -61px no-repeat;
+}
+@mixin sprite-arrow-comment() {
+	width: 20px;
+	height: 22px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -90px no-repeat;
+}
+@mixin sprite-arrow-left() {
+	width: 20px;
+	height: 14px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -122px no-repeat;
+}
+@mixin sprite-arrow-right() {
+	width: 20px;
+	height: 14px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -146px no-repeat;
+}
+@mixin sprite-attention() {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -170px no-repeat;
+}
+@mixin sprite-attention-big() {
+	width: 31px;
+	height: 31px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -196px no-repeat;
+}
+@mixin sprite-audio-hover() {
+	width: 38px;
+	height: 34px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -237px no-repeat;
+}
+@mixin sprite-audio() {
+	width: 38px;
+	height: 34px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -281px no-repeat;
+}
+@mixin sprite-basket-disabled() {
+	width: 17px;
+	height: 15px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -325px no-repeat;
+}
+@mixin sprite-basket() {
+	width: 17px;
+	height: 15px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -350px no-repeat;
+}
+@mixin sprite-book-hover() {
+	width: 27px;
+	height: 30px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -375px no-repeat;
+}
+@mixin sprite-book() {
+	width: 27px;
+	height: 30px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -415px no-repeat;
+}
+@mixin sprite-brain() {
+	width: 16px;
+	height: 15px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -455px no-repeat;
+}
+@mixin sprite-certificate() {
+	width: 17px;
+	height: 15px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -480px no-repeat;
+}
+@mixin sprite-check-mark() {
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -505px no-repeat;
+}
+@mixin sprite-clip() {
+	width: 13px;
+	height: 14px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -533px no-repeat;
+}
+@mixin sprite-clock() {
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -557px no-repeat;
+}
+@mixin sprite-close-big-hover() {
+	width: 31px;
+	height: 31px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -585px no-repeat;
+}
+@mixin sprite-close-big() {
+	width: 31px;
+	height: 31px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -626px no-repeat;
+}
+@mixin sprite-close() {
+	width: 11px;
+	height: 11px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -667px no-repeat;
+}
+@mixin sprite-close16-hover() {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -688px no-repeat;
+}
+@mixin sprite-close16() {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -714px no-repeat;
+}
+@mixin sprite-cloud() {
+	width: 40px;
+	height: 35px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -740px no-repeat;
+}
+@mixin sprite-comment-cloud() {
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -785px no-repeat;
+}
+@mixin sprite-compass() {
+	width: 66px;
+	height: 66px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -819px no-repeat;
+}
+@mixin sprite-consultation() {
+	width: 26px;
+	height: 27px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -895px no-repeat;
+}
+@mixin sprite-copy-hover() {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -932px no-repeat;
+}
+@mixin sprite-copy() {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -958px no-repeat;
+}
+@mixin sprite-delete-hover() {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -984px no-repeat;
+}
+@mixin sprite-delete() {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1010px no-repeat;
+}
+@mixin sprite-edit-hover() {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1036px no-repeat;
+}
+@mixin sprite-edit() {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1062px no-repeat;
+}
+@mixin sprite-eye-closed() {
+	width: 23px;
+	height: 10px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1088px no-repeat;
+}
+@mixin sprite-eye() {
+	width: 23px;
+	height: 13px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1108px no-repeat;
+}
+@mixin sprite-fb-white() {
+	width: 8px;
+	height: 16px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1131px no-repeat;
+}
+@mixin sprite-flag() {
+	width: 13px;
+	height: 22px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1157px no-repeat;
+}
+@mixin sprite-free() {
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1189px no-repeat;
+}
+@mixin sprite-header-menu() {
+	width: 25px;
+	height: 17px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1214px no-repeat;
+}
+@mixin sprite-lock-hover() {
+	width: 15px;
+	height: 18px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1241px no-repeat;
+}
+@mixin sprite-lock() {
+	width: 15px;
+	height: 18px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1269px no-repeat;
+}
+@mixin sprite-messages-hover() {
+	width: 17px;
+	height: 12px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1297px no-repeat;
+}
+@mixin sprite-messages() {
+	width: 17px;
+	height: 12px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1319px no-repeat;
+}
+@mixin sprite-minus-big() {
+	width: 14px;
+	height: 2px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1341px no-repeat;
+}
+@mixin sprite-olympiad() {
+	width: 15px;
+	height: 20px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1353px no-repeat;
+}
+@mixin sprite-paypal() {
+	width: 80px;
+	height: 20px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1383px no-repeat;
+}
+@mixin sprite-plus-big() {
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1413px no-repeat;
+}
+@mixin sprite-plus() {
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1437px no-repeat;
+}
+@mixin sprite-print-hover() {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1457px no-repeat;
+}
+@mixin sprite-print() {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1483px no-repeat;
+}
+@mixin sprite-rate-slider-box() {
+	width: 16px;
+	height: 22px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1509px no-repeat;
+}
+@mixin sprite-rate-slider-end-box() {
+	width: 16px;
+	height: 22px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1541px no-repeat;
+}
+@mixin sprite-rate-slider-noselected() {
+	width: 16px;
+	height: 22px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1573px no-repeat;
+}
+@mixin sprite-rate-slider-selected() {
+	width: 16px;
+	height: 22px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1605px no-repeat;
+}
+@mixin sprite-rate-slider-start-box() {
+	width: 16px;
+	height: 22px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1637px no-repeat;
+}
+@mixin sprite-really() {
+	width: 133px;
+	height: 133px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1669px no-repeat;
+}
+@mixin sprite-result-star() {
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1812px no-repeat;
+}
+@mixin sprite-right() {
+	width: 27px;
+	height: 20px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1840px no-repeat;
+}
+@mixin sprite-robokassa() {
+	width: 140px;
+	height: 40px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1870px no-repeat;
+}
+@mixin sprite-save-hover() {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1920px no-repeat;
+}
+@mixin sprite-save() {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1946px no-repeat;
+}
+@mixin sprite-search-hover() {
+	width: 21px;
+	height: 21px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -1972px no-repeat;
+}
+@mixin sprite-search() {
+	width: 21px;
+	height: 21px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2003px no-repeat;
+}
+@mixin sprite-setting-hover() {
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2034px no-repeat;
+}
+@mixin sprite-setting() {
+	width: 19px;
+	height: 19px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2062px no-repeat;
+}
+@mixin sprite-show() {
+	width: 40px;
+	height: 20px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2091px no-repeat;
+}
+@mixin sprite-show-hover() {
+	width: 40px;
+	height: 20px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2121px no-repeat;
+}
+@mixin sprite-singin() {
+	width: 27px;
+	height: 18px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2151px no-repeat;
+}
+@mixin sprite-singup() {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2179px no-repeat;
+}
+@mixin sprite-slider-arrow-left-hover() {
+	width: 39px;
+	height: 22px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2205px no-repeat;
+}
+@mixin sprite-slider-arrow-left() {
+	width: 39px;
+	height: 22px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2237px no-repeat;
+}
+@mixin sprite-slider-arrow-right-hover() {
+	width: 39px;
+	height: 22px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2269px no-repeat;
+}
+@mixin sprite-slider-arrow-right() {
+	width: 39px;
+	height: 22px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2301px no-repeat;
+}
+@mixin sprite-social-fb-hover() {
+	width: 40px;
+	height: 20px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2333px no-repeat;
+}
+@mixin sprite-social-fb() {
+	width: 40px;
+	height: 20px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2363px no-repeat;
+}
+@mixin sprite-social-gplus-hover() {
+	width: 40px;
+	height: 20px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2393px no-repeat;
+}
+@mixin sprite-social-gplus() {
+	width: 40px;
+	height: 20px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2423px no-repeat;
+}
+@mixin sprite-social-insta-hover() {
+	width: 40px;
+	height: 20px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2453px no-repeat;
+}
+@mixin sprite-social-insta() {
+	width: 40px;
+	height: 20px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2483px no-repeat;
+}
+@mixin sprite-social-twitter-hover() {
+	width: 40px;
+	height: 20px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2513px no-repeat;
+}
+@mixin sprite-social-twitter() {
+	width: 40px;
+	height: 20px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2543px no-repeat;
+}
+@mixin sprite-social-vk-hover() {
+	width: 40px;
+	height: 20px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2573px no-repeat;
+}
+@mixin sprite-social-vk() {
+	width: 40px;
+	height: 20px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2603px no-repeat;
+}
+@mixin sprite-sort-arrow() {
+	width: 9px;
+	height: 7px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2633px no-repeat;
+}
+@mixin sprite-star-hover() {
+	width: 18px;
+	height: 17px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2650px no-repeat;
+}
+@mixin sprite-star() {
+	width: 18px;
+	height: 17px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2677px no-repeat;
+}
+@mixin sprite-stat() {
+	width: 10px;
+	height: 9px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2704px no-repeat;
+}
+@mixin sprite-text-hover() {
+	width: 26px;
+	height: 28px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2723px no-repeat;
+}
+@mixin sprite-text() {
+	width: 26px;
+	height: 28px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2761px no-repeat;
+}
+@mixin sprite-thumb() {
+	width: 17px;
+	height: 16px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2799px no-repeat;
+}
+@mixin sprite-unlock-hover() {
+	width: 15px;
+	height: 18px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2825px no-repeat;
+}
+@mixin sprite-unlock() {
+	width: 15px;
+	height: 18px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2853px no-repeat;
+}
+@mixin sprite-video-hover() {
+	width: 32px;
+	height: 26px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2881px no-repeat;
+}
+@mixin sprite-video-small() {
+	width: 17px;
+	height: 14px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2917px no-repeat;
+}
+@mixin sprite-video() {
+	width: 32px;
+	height: 26px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2941px no-repeat;
+}
+@mixin sprite-visa() {
+	width: 92px;
+	height: 21px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -2977px no-repeat;
+}
+@mixin sprite-vk-white() {
+	width: 13px;
+	height: 15px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -3008px no-repeat;
+}
+@mixin sprite-webinar() {
+	width: 22px;
+	height: 16px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -3033px no-repeat;
+}
+@mixin sprite-webmoney() {
+	width: 89px;
+	height: 23px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -3059px no-repeat;
+}
+@mixin sprite-wrong() {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -3092px no-repeat;
+}
+@mixin sprite-yandex() {
+	width: 69px;
+	height: 31px;
+	display: inline-block;
+	background: url('../Content/sprite.sprite.png') -10px -3122px no-repeat;
+}

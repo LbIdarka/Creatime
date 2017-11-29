@@ -1,0 +1,1291 @@
+// ______________ стили из auth.css (возможно, влияют на другие окна, порой перебивают стили site-paper.css, которого уже нет на главной)
+#login-dialog {
+	position: absolute;
+}
+#EditGroupDialog {
+	position: absolute;
+	z-index: 100;
+	margin-left: 155px;
+	margin-top: 5px;
+}
+#reg-dialog {}
+#recover-psw-dialog {}
+.user-photo {
+	border-radius: 100%;
+}
+.modal-dialog-titlebar {
+	padding: 10px 15px 0;
+}
+// _____________ Start Guide Modal ______________//
+.modal-guide {
+  background: #fff;
+  outline: none;
+  text-align: left;
+  padding: 30px;
+  width: 500px;
+  word-wrap: break-word;
+  position: absolute;
+  z-index: 1;
+  @extend .modal-shadow;
+  @include w500 {
+    width: 100%;
+  }
+  .p {
+    padding: 5px;
+  }
+}
+// _____________ End Guide Modal ________________//
+
+// _____________ Start Login Modal _____________ //
+.modal-login {
+	background: #fff;
+	outline: none;
+	padding-top: 30px;
+    min-width: 320px;
+	@extend .modal-shadow;
+		@include w398 {
+			width: 100%;
+		}
+	.ui-dialog-titlebar {
+		padding: 10px 15px 0;
+	}
+	.ui-dialog-titlebar-close {
+		float: right;
+		border: none;
+		background: #fff;
+	}
+	.login-form {
+		border: none;
+		margin: 0 55px;
+		padding: 0;
+	}
+	.valid-error {
+		font: normal 14px Arial, sans-serif;
+		color: #FF0000;
+		li {
+			margin-bottom: 10px;
+		}
+	}
+	.ml-login,
+	.ml-password {
+		background: #fff;
+		border: 1px solid #C3C3C3;
+		padding: 8px;
+		font: normal 13px Arial, sans-serif;
+		margin-bottom: 14px;
+		width: 100%;
+	}
+	.ml-check {
+		margin-right: 5px;
+		vertical-align: middle;
+		@extend .checkbox-base;
+	}
+	.ml-check-label {
+		font: normal 11px Arial, sans-serif;
+		color: #000000;
+	}
+	fieldset ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+	.ml-row {
+		margin: 17px 0 35px;
+	}
+	.reg-dialog-link-container {
+		text-align: center;
+		background: #EEEEEE;
+		padding: 14px 0;
+		margin: 0;
+	}
+	hr {
+		margin: 0;
+		border: 1px solid #EAEAEA;
+	}
+	.ml-button {
+		@extend .button-standart-2;
+		@extend .button-orange;
+		border-top: 0;
+		border-right: 0;
+		border-left: 0;
+		margin-left: 26px;
+		margin-top: -3px;
+		@include w398 {
+			display: block;
+			margin: 15px auto auto 0;
+		}
+	}
+	.ml-social {
+		padding: 0 55px 27px;
+	}
+	.mls-title {
+		font: bold 15px "FiraSans", sans-serif;
+	}
+}
+.btn-social {
+	//!! используются также в регистрации
+	position: relative;
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	background: #FA9A15;
+	border-radius: 33px;
+	&:hover {
+		background: #F86005;
+	}
+	&.fb {
+		margin-right: 8px;
+	}
+	&.fb:before {
+		content: "";
+		position: absolute;
+        @include sprite-fb-white;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+	}
+	&.vk:before {
+		content: "";
+        @include sprite-vk-white;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+	}
+}
+// _____________ End Login Modal _____________ //
+// _____________ Start Register Modal _____________ //
+.modal-registration {
+    margin:auto;
+	text-align: left;
+	white-space: normal;
+	width: 400px;
+	padding-top: 30px;
+	position: relative;
+	background: #fff;
+	outline: none;
+	.ui-dialog-titlebar {
+		padding: 10px 15px 0;
+	}
+	.ui-dialog-titlebar-close {
+		float: right;
+		border: none;
+		background: #fff;
+	}
+	.reg-title {
+		font: bold 20px "FiraSans", sans-serif;
+		color: #000;
+	}
+	.valid-error {
+		font: normal 14px Arial, sans-serif;
+		color: #FF0000;
+		li {
+			margin-bottom: 10px;
+		}
+	}
+	.reg-form {
+		border: none;
+		margin: 0 55px 35px;
+		padding: 0;
+		label {
+			font: normal 13px Arial, sans-serif;
+			display: inline-block;
+			margin-bottom: 5px;
+		}
+	}
+	.mr-input {
+		background: #fff;
+		border: 1px solid #C3C3C3;
+		padding: 8px;
+		font: normal 13px Arial, sans-serif;
+		margin-bottom: 14px;
+		width: 100%;
+	}
+	.mr-button {
+		@extend .button-standart-2;
+		@extend .button-orange;
+        width: 100%;
+	}
+	hr {
+		margin: 0;
+		border: 1px solid #EAEAEA;
+	}
+	.reg-logins {}
+	.mr-social {
+		padding: 0 55px 27px;
+	}
+	.mrs-title {
+		font: bold 15px "FiraSans", sans-serif;
+	}
+}
+// _____________ End Register Modal _____________ //
+// _____________ Start Recover Password Modal _____________ //
+.modal-recover-password {
+	background: #fff;
+	text-align: left;
+	white-space: normal;
+	max-width: 355px;
+	padding: 30px;
+	.ui-dialog-titlebar {
+		padding: 10px 15px 0;
+	}
+	.ui-dialog-titlebar-close {
+		float: right;
+		border: none;
+		background: #fff;
+	}
+	.recover-form {
+		display: inline-block;
+		border: none;
+		padding: 0;
+		label {
+			font: normal 13px Arial, sans-serif;
+			display: inline-block;
+			margin-bottom: 5px;
+		}
+	}
+	.rec-title {
+		font: bold 20px "FiraSans", sans-serif;
+		color: #000;
+		margin: 0 0 12px;
+	}
+	.valid-error {
+		font: normal 14px Arial, sans-serif;
+		color: #FF0000;
+		li {
+			margin-bottom: 10px;
+		}
+	}
+	.mrp-input {
+		background: #fff;
+		border: 1px solid #C3C3C3;
+		padding: 8px;
+		font: normal 13px Arial, sans-serif;
+		margin-bottom: 14px;
+		width: 100%;
+	}
+	.mrp-text {
+		font: normal 13px Arial, sans-serif;
+	}
+	.mr-row {
+		padding: 20px 0;
+	}
+	.mr-button {
+		@extend .button-standart-2;
+		@extend .button-orange;
+		border-top: 0;
+		border-right: 0;
+		border-left: 0;
+		float: right;
+	}
+}
+// модальное окошко наградить
+.modal-reward {
+	position: relative;
+	@extend .modal-shadow;
+	background: #fff;
+	z-index: 2;
+	padding: 30px;
+	display: inline-block;
+	.mr-title {
+		font: bold 15px/1 "Arial", sans-serif;
+		margin: 0 0 15px;
+	}
+	.mr-select {
+		@extend .select-base;
+		width: 200px;
+	}
+	.mr-row {
+		margin-top: 10px;
+		@extend .clearfix;
+	}
+	.mr-text {
+		font: bold 13px/1 "Arial", sans-serif;
+	}
+	.mr-input {
+		@extend .input-base;
+		@extend %input32;
+		width: 58px;
+		vertical-align: middle; //для IE
+	}
+	.mr-button {
+		float: right;
+		@extend .button-small;
+		@extend .button-orange;
+		margin-top: 4px;
+	}
+}
+// модальное окно "Рекомендовать"
+.modal-recomendation {
+	max-width: 370px;
+	padding: 40px 0;
+	background: #fff;
+	display: inline-block;
+	.mre-title {
+		margin: 0 0 11px 30px;
+		font: bold 20px/1.5 "FiraSans", sans-serif;
+	}
+	.mre-cut-box {
+		padding: 0 30px;
+		margin-bottom: 25px;
+	}
+	.mre-label {
+		font: normal 13px/1 "Arial", sans-serif;
+		display: inline-block;
+		width: 100%;
+		margin-bottom: 8px;
+	}
+	.mre-select {
+		font: normal 13px/1 "Arial", sans-serif;
+		@extend .select-base;
+		max-width: 260px;
+		@extend %select32;
+		margin-bottom: 16px;
+        padding-right: 25px;
+	}
+	.mre-add-box {
+		border-top: 1px solid #D9D9D9;
+		border-bottom: 1px solid #D9D9D9;
+		padding: 15px 30px;
+		margin-bottom: 15px;
+	}
+	.mre-text-add {
+		display: inline-block;
+		font: normal 13px/1 "Arial", sans-serif;
+		position: relative;
+		margin-left: 20px;
+		@extend %link-black;
+		@extend .dotted-link;
+		&:before {
+			content: '';
+			position: absolute;
+            @include sprite-plus;
+			left: -20px;
+		}
+	}
+	.mre-textarea-box {
+		padding: 0 30px;
+		margin-bottom: 25px;
+	}
+	.mre-textarea {
+		@extend .textarea-base;
+		width: 100%;
+		height: 100px;
+	}
+	.mre-button-row {
+		text-align: center;
+	}
+	.mre-buton {
+		@extend .button-orange;
+		@extend .button-standart-2;
+	}
+}
+/// start modal think
+.modal-think {
+    margin: auto;
+	max-width: 600px;
+    min-width: 400px;
+    min-height: 100px;
+	background-color: #eaeaea;
+	position: relative;
+	padding-bottom: 30px;
+	padding-top: 30px;
+    box-shadow:none;
+    .header-container{
+        margin-top:0;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    #thinks{
+        .think-wrapper{
+            padding: 0;
+
+            .tw-footer{
+                .view-bar{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+// _____________ Попап с добавлением людей в чат
+.modal-add-member {
+    display: inline-block;
+    width: 300px;
+    background: #fff;
+    position: absolute;
+    margin: 40px 0 0 60px;
+    z-index: 4;
+    @extend .modal-shadow;
+    // padding: 15px;
+    .mam-scroll-box {
+        margin: 30px 10px 0 30px; //для скролла
+        padding-right: 20px; //для скролла
+        height: 305px;
+        overflow: auto;
+    }
+
+    .mam-group-box {
+        border-bottom: 1px solid #EAEAEA;
+        margin-bottom: 19px;
+        padding-bottom: 7px;
+
+        .mam-lable-groups {
+            top: -2px;
+            padding: 0 0 0 21px;
+        }
+    }
+
+    .mam-group-row {
+        display: inline-block;
+        margin-bottom: 14px;
+        width: 100%;
+        @extend .clearfix;
+
+        .mam-lable {
+            float: right;
+            position: relative;
+        }
+    }
+
+    .mam-group-text {
+        display: inline-block;
+        width: 200px;
+        font: normal 11px/1 "Arial", sans-serif;
+        @extend .text-cut;
+
+        .accent {
+            font-weight: bold;
+        }
+    }
+
+    .mgr-checkbox {
+        @extend .checkbox-base;
+        float: right;
+    }
+
+    .mam-member-row {
+        margin-bottom: 7px;
+        @extend .clearfix;
+
+        .mam-lable {
+            float: right;
+            position: relative;
+            top: 16px;
+            padding: 0;
+        }
+    }
+
+    .mam-member {
+        display: inline-block;
+        width: 181px;
+    }
+
+    .mam-img-box {
+        display: inline-block;
+        float: left;
+        width: 45px;
+        height: 45px;
+        margin-right: 10px;
+    }
+
+    .mam-img {
+        width: 100%;
+        border-radius: 50px;
+    }
+
+    .mam-name-1 {
+        padding-top: 11px;
+    }
+
+    .mam-name-1,
+    .mam-name-2 {
+        display: inline-block;
+        width: 100px;
+        font: normal 11px/1.2 "Arial", sans-serif;
+        color: #000;
+        @extend .text-cut;
+    }
+
+    .mmr-checkbox {
+        @extend .checkbox-base;
+        float: right;
+        position: relative;
+        top: 16px;
+    }
+
+    .mam-add-box {
+        display: inline-block;
+        padding: 25px 30px 30px;
+        border-top: 1px solid #EAEAEA;
+        width: 100%;
+        @extend .clearfix;
+    }
+
+    .mam-button-1 {
+        @extend %link-base;
+        @extend .pointer;
+    }
+
+    .mam-button-2 {
+        @extend .button-small;
+        @extend .button-orange;
+        @extend .pointer;
+        float: right;
+    }
+
+    .select-all {
+        font: bold 13px/1 "Arial", sans-serif;
+        cursor: pointer;
+    }
+
+    .mam-group-row-check-all {
+        @extend .mam-group-row;
+
+        .select-all-lable {
+            top: 0;
+            padding: 0 0 0 21px;
+        }
+    }
+
+    .mam-member-row-check-all {
+        @extend .mam-member-row;
+
+        .select-all-lable {
+            top: 0;
+            right: 21px;
+        }
+    }
+}
+// _____________ Модальное окно со статистикой времени по месяцам
+.modal-time-stats {
+	background: #fff;
+	max-width: 625px;
+	// height: 515px; //чтоб не прыгали при переключении табов
+	height: 790px;
+	padding: 40px 30px;
+	position: relative;
+	.mts-title {
+		font: bold 20px/1 "FiraSans", sans-serif;
+		margin: 0 0 20px;
+	}
+	.statistic-input {
+		@extend .input-base;
+		@extend %input32;
+		margin-right: 15px;
+	}
+	.statistic-input-2 {
+		@extend .input-base;
+		@extend %input32;
+			@include w468 {
+			margin-top: 15px;
+			}
+	}
+	.mts-cut-box {
+		position: relative;
+		font-size: 0;
+		overflow: auto;
+		max-width: 540px;
+		max-height: 566px;
+		margin-top: 10px; //после появл инпутов стало нужно
+	}
+}
+.filter-tab {
+	padding: 9px 0;
+	margin-bottom: 20px;
+		@include w387 {
+				display: flex;
+				display: -ms-flexbox;
+				flex-direction: column;
+				-ms-flex-direction: column;
+				flex-wrap: nowrap;
+				display: -webkit-flex;
+				align-items: center;
+				margin-bottom: 0;
+		}
+	.ft-link {
+		font: normal 13px/1 "Arial", sans-serif;
+		@extend .dotted-link;
+		color: #000;
+		display: inline-block;
+		margin-right: 15px;
+		@include w387 {
+			margin-bottom: 10px;
+		}
+		&:hover {
+			color: #F86005;
+		}
+		&.active {
+			border-bottom: none;
+			padding: 6px 16px;
+			background: #F86005;
+			border-radius: 12px;
+			color: #fff;
+			&:hover {
+				color: #000;
+			}
+		}
+	}
+}
+.all-diagram-month {
+	border-bottom: 1px solid #CCCCCC;
+	white-space: nowrap;
+	margin-bottom: 5px;
+	display: inline-block;
+	.diagram-value {
+		font: bold 11px/1 "Arial", sans-serif;
+		display: block;
+		margin-bottom: 10px;
+	}
+}
+.data-center {
+	width: 78px;
+	display: inline-block;
+	text-align: center;
+}
+.diagram-column {
+	display: inline-block;
+	width: 11px;
+	height: 191px;
+	background: #EAEAEA;
+	position: relative;
+	.dc-fill {
+		display: inline-block;
+		height: 44%;
+		background: #FA9A15;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+}
+.all-date {
+	white-space: nowrap;
+	margin-bottom: 22px;
+}
+.diagram-date-1,
+.diagram-date-2 {
+	font: normal 11px/1 "Arial", sans-serif;
+	display: block;
+	@extend .text-cut;
+}
+// _____________ Модальное окно со статистикой времени по группам
+.all-diagram-groups {
+	padding: 20px 0 0;
+	max-height: 300px;
+	padding-right: 15px;
+}
+.data-item {
+	@extend .clearfix;
+	padding: 15px 0;
+	.di-name {
+		font: 11px/1 "Arial", sans-serif;
+		font-weight: normal;
+	}
+	.di-accent {
+		font-weight: bold;
+	}
+	.di-time {
+		font: bold 11px/1 "Arial", sans-serif;
+		float: right;
+	}
+	.diagram-column-hor {
+		display: inline-block;
+		width: 100%;
+		height: 11px;
+		background: #EAEAEA;
+		position: relative;
+		margin-top: 5px;
+	}
+	.dch-fill {
+		display: inline-block;
+		width: 44%;
+		background: #FA9A15;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		top: 0;
+	}
+}
+// _____________ Модальное окно со статистикой времени по ученикам
+.all-diagram-students {
+	// padding: 20px 15px 0 0;
+	max-height: 300px;
+	padding-right: 15px;
+}
+.data-item-2 {
+	padding: 15px 0;
+	@extend .clearfix;
+	.di2-time {
+		font: bold 11px/1 "Arial", sans-serif;
+		float: right;
+		position: relative;
+		top: 26px;
+	}
+	.diagram-column-hor {
+		display: inline-block;
+		width: 100%;
+		height: 11px;
+		background: #EAEAEA;
+		position: relative;
+		margin-top: 5px;
+	}
+	.dch-fill {
+		display: inline-block;
+		width: 44%;
+		background: #FA9A15;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		top: 0;
+	}
+}
+.di-student-box {
+	width: 210px;
+	margin-bottom: 4px;
+	display: inline-block;
+	float: left; //для IE
+	.dsb-img-box {
+		position: relative;
+		display: inline-block;
+		float: left;
+		width: 45px;
+		height: 45px;
+		margin-right: 10px;
+	}
+	.dsb-img {
+		width: 100%;
+		border-radius: 50px;
+	}
+	.dsb-name-1 {
+		display: inline-block;
+		width: 150px;
+		font: normal 11px/1.2 "Arial", sans-serif;
+		color: #000;
+		margin-top: 12px;
+		@extend .text-cut;
+	}
+	.dsb-name-2 {
+		display: inline-block;
+		width: 150px;
+		font: normal 11px/1.2 "Arial", sans-serif;
+		color: #000;
+		@extend .text-cut;
+	}
+}
+// модальное окно с покупкой статуса
+.modal-buy-status, .modal-buy-gym {
+	// width: 370px;
+	// // border: 1px solid #000;
+	// padding: 41px 52px 54px;
+	/*width: 340px;*/
+    min-width: 320px;
+    max-width: 660px;
+	padding: 50px 60px;
+	background: #fff;
+	display: inline-block; //выпилить
+    text-align: left;
+	@include w387 {
+		width: 100%;
+		display: block;
+		padding: 30px 20px;
+	}
+	.mbs-title {
+		margin: 0 0 11px;
+		font: bold 20px/1.5 "FiraSans", sans-serif;
+	}
+	.mbs-label {
+		font: normal 13px/1 "Arial", sans-serif;
+		display: inline-block;
+		width: 100%;
+		margin-bottom: 8px;
+	}
+	.mbs-select {
+		font: normal 13px/1 "Arial", sans-serif;
+		@extend .select-base;
+		//max-width: 355px;
+        width: 100%;
+		@extend %select32;
+		margin-bottom: 16px;
+        padding-right: 23px;
+	}
+	.mbs-input {
+		@extend .input-base;
+		@extend %input32;
+		width: 155px;
+		margin-right: 10px;
+	}
+    .pt-header{
+        .pt-col-1, .pt-col-2, .pt-col-3, .pt-col-4{
+            background-color: rgb(234,234,234);
+            border-right: 2px solid #fff;
+        }
+        .pt-col-1{
+            padding-top: 30px;
+        }
+    }
+    .pt-col-1{
+        padding-left: 15px;
+     }
+    .pt-time{
+        .ptt-text-1{
+            font-weight: bold;
+            display: block;
+        }
+    }
+    .price-col.side-border.bottom-border{
+        background-color: #F86005;
+        @include w610{
+            background-color: #fff;
+        }
+        .col-price{
+            color: #fff;
+            @include w610{
+                 color: #F86005;
+            }
+        }
+    }
+    .promo-code-container{
+        display: inline-block;
+        width: 65%;
+        min-width: 290px;
+				vertical-align: top;
+        @include w610{
+            width: 100%;
+        }
+        .promo-error-container{
+            display: inline-block;
+            vertical-align: text-top;
+            /*@include w610{
+                margin-top: 15px;
+            }*/
+            .promo-wrong {
+                @include sprite-wrong;
+                vertical-align: bottom;
+		    }
+            .promo-right{
+                @include sprite-right;
+                vertical-align: bottom;
+            }
+        }
+    }
+    .cost-container{
+        display: inline-block;
+        width: 34%;
+        text-align: right;
+				height: 71px;
+        @include w610{
+								height: 91px;
+                margin-top: 15px;
+                text-align: left;
+            }
+        .cc-title{
+            font-size: 14px;
+        }
+    }
+}
+
+.modal-buy-gym {
+    width: 450px;
+}
+.status-level-container {
+    margin-bottom: 16px;
+
+    .slc-row {
+        font: normal 13px/1 "Arial", sans-serif;
+        margin-bottom: 10px;
+    }
+
+    .slc-price {
+        font-weight: bold;
+    }
+
+    .pt-row:nth-last-child(2) {
+        .pt-col-1, .pt-col-2 {
+            line-height: 40px;
+        }
+    }
+}
+.mbs-text {
+	display: inline-block;
+	width: 100%;
+	font: normal 13px/1 "Arial", sans-serif;
+	margin: 7px auto;
+}
+.mbs-accent {
+	font: bold 20px/1 "FiraSans", sans-serif;
+}
+.mbs-accent-2 {
+	color: #666666;
+}
+.mbs-button-row {
+	text-align: center;
+	margin-top: 35px;
+	@include w318 {
+		margin-top: 15px;
+		text-align: left;
+	}
+}
+.mbs-buton {
+	@extend .button-standart-2;
+	@extend .button-orange;
+	position: relative;
+	margin: auto;
+}
+.mbs-buton-check {
+	@extend .button-standart-2;
+	@extend .button-yellow;
+	position: relative;
+	margin: auto;
+}
+.money-box {
+	.mb-text {
+		display: inline-block;
+		width: 100%;
+		font: bold 13px/1 "Arial", sans-serif;
+		margin-bottom: 20px;
+	}
+	.mb-item {
+		display: inline-block;
+		// width: 128px; //впилить, если 4 варианта оплаты
+		height: 40px;
+		vertical-align: top;
+		@include w318 {
+			margin-bottom: 10px;
+		}
+		&.mbi-position {
+			position: relative;
+			left: 10px;
+			@include w318 {
+				left: 0;
+			}
+		}
+	}
+	.mb-radio {
+		@extend .radio-base;
+		vertical-align: top;
+		margin: 10px 10px 0 0;
+	}
+	.mb-label {
+		vertical-align: top;
+	}
+	.mb-robokassa {
+		//остальную оплату возможно выпилить
+        @include sprite-robokassa;
+		margin: -1px auto auto -10px;
+	}
+	.mb-visa {
+        @include sprite-visa;
+		margin-top: 7px;
+	}
+	.mb-yandex {
+        @include sprite-yandex;
+		margin-top: 3px;
+	}
+	.mb-webmoney {
+        @include sprite-webmoney;
+		margin-top: 8px;
+	}
+	.mb-paypal {
+        @include sprite-paypal;
+		margin-top: 9px;
+	}
+}
+// модальное окно с покупкой оригинала сертификата
+.modal-buy-certificate {
+    width: 395px;
+    padding: 40px 30px;
+    background: #fff;
+    display: inline-block;
+
+    .mbc-title {
+        margin: 0 0 11px;
+        font: bold 20px/1.5 "FiraSans", sans-serif;
+    }
+
+    .mbc-text {
+        font: normal 14px/1.5 "Arial", sans-serif;
+        display: inline-block;
+        margin: 0 auto 20px;
+    }
+
+    .mbc-label {
+        font: normal 13px/1 "Arial", sans-serif;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .mbc-input {
+        @extend .input-base;
+        @extend %input32;
+        width: 100%;
+        margin: 0 10px 10px 0;
+    }
+
+    .mbc-small-input {
+        @extend .input-base;
+        @extend %input32;
+        width: 115px;
+        margin-right: 10px;
+    }
+
+    .mbc-button-check {
+        @extend .button-small;
+        @extend .button-yellow;
+        position: relative;
+        margin: auto;
+    }
+
+    .mbc-button-row {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .mbc-buton {
+    }
+
+    .certificate-promo-error-container {
+        display: inline-block;
+        vertical-align: text-top;
+        /*@include w610{
+                margin-top: 15px;
+            }*/
+        .certificate-promo-wrong {
+            @include sprite-wrong;
+            vertical-align: bottom;
+            margin-right: 10px;
+        }
+
+        .certificate-promo-right {
+            @include sprite-right;
+            vertical-align: bottom;
+        }
+
+        .mbs-certificate-promo-error {
+            color: #FF0000;
+            width: 100%;
+            font: normal 13px/1 "Arial", sans-serif;
+            height: 13px;
+            margin: 20px auto auto auto;
+        }
+    }
+}
+// модальное окно с покупкой доступа к тренажерному залу
+.modal-buy-gym {
+    width: 395px;
+    padding: 40px 30px;
+    background: #fff;
+    display: inline-block;
+
+    .mbc-title {
+        margin: 0 0 11px;
+        font: bold 20px/1.5 "FiraSans", sans-serif;
+    }
+
+    .mbc-text {
+        font: normal 14px/1.5 "Arial", sans-serif;
+        display: inline-block;
+        margin: 0 auto 20px;
+    }
+
+    .mbc-label {
+        font: normal 13px/1 "Arial", sans-serif;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .mbc-input {
+        @extend .input-base;
+        @extend %input32;
+        width: 100%;
+        margin: 0 10px 10px 0;
+    }
+
+    .mbc-small-input {
+        @extend .input-base;
+        @extend %input32;
+        width: 115px;
+        margin-right: 10px;
+    }
+
+    .mbc-button-check {
+        @extend .button-small;
+        @extend .button-yellow;
+        position: relative;
+        margin: auto;
+    }
+
+    .mbc-button-row {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .mbc-buton {
+    }
+}
+// _____________ Попап с добавлением новой группы
+.modal-add-group {
+    display: inline-block;
+    width: 300px;
+    background: #fff;
+    @extend .modal-shadow;
+    // padding: 15px;
+    .mag-new-box {
+        display: inline-block;
+        padding: 30px;
+        border-bottom: 1px solid #EAEAEA;
+        width: 100%;
+    }
+
+    .group-name-error {
+        font-size: 13px;
+        display: block;
+        margin-bottom: 10px;
+        color:#FF0000;
+    }
+
+    .mag-input {
+        @extend .input-base;
+        @extend %input32;
+        width: 100%;
+    }
+
+    .mag-scroll-box {
+        margin: 24px 9px 24px 30px;
+        height: 168px;
+        padding-right: 20px;
+    }
+
+    .mag-member-box {
+    }
+
+    .mag-member-row {
+        margin-bottom: 7px;
+        @extend .clearfix;
+    }
+
+    .mag-member {
+        display: inline-block;
+        width: 181px;
+    }
+
+    .mag-img-box {
+        display: inline-block;
+        float: left;
+        width: 45px;
+        height: 45px;
+        margin-right: 10px;
+    }
+
+    .mag-img {
+        width: 100%;
+        border-radius: 50px;
+    }
+
+    .mag-name-1 {
+        padding-top: 11px;
+    }
+
+    .mag-name-1,
+    .mag-name-2 {
+        display: inline-block;
+        width: 100px;
+        font: normal 11px/1.2 "Arial", sans-serif;
+        color: #000;
+        @extend .text-cut;
+    }
+
+    .mmr-checkbox {
+        @extend .checkbox-base;
+        float: right;
+        position: relative;
+        top: 16px;
+    }
+
+    .mag-add-box {
+        display: inline-block;
+        padding: 25px 30px 30px;
+        border-top: 1px solid #EAEAEA;
+        width: 100%;
+        @extend .clearfix;
+    }
+
+    .mag-button-1 {
+        @extend %link-base;
+    }
+
+    .mag-button-2 {
+        @extend .button-small;
+        @extend .button-orange;
+        float: right;
+    }
+}
+#students-available{
+    .mmr-label{
+        @extend .mam-lable;
+        float:right;
+        top:15px;
+    }
+}
+// _____________ Попап с потраченным временем
+.modal-time {
+	@extend .modal-shadow;
+	background: #fff;
+	position: relative;
+	z-index: 10;
+	padding: 30px;
+	display: inline-block;
+	width: 220px;
+	.mt-title {
+		font: bold 15px/1 "Arial", sans-serif;
+		margin: 0 0 15px;
+	}
+	.mt-row {
+		margin-top: 10px;
+	}
+	.mt-input {
+		@extend .input-base;
+		@extend %input32;
+		width: 85px;
+		margin-right: 15px;
+	}
+	.mt-button {
+		@extend .button-small;
+		@extend .button-orange;
+		margin-top: 4px;
+	}
+	.error-note{
+		font: normal 14px Arial, sans-serif;
+		color: #FF0000;
+		text-align: center;
+		padding: 10px 30px 0px;
+	}
+}
+// модалка для закрытых тестов и медиа
+.modal-media-hint,
+.modal-test-hint {
+	position: absolute;
+	padding-top: 25px;
+	max-width: 350px;
+	width: 100%;
+	background-color: transparent;
+	outline: none;
+	.mmh-wrapper,
+	.mth-wrapper {
+		background-color: #fff;
+		height: 140px;
+	}
+	.hint-text {
+		display: block;
+		padding: 20px;
+	}
+	.cmhm-button-container {
+		text-align: center;
+	}
+}

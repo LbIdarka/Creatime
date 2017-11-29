@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Неужели это так</title>
+	<link href="../Styles/prepro.css" rel="stylesheet" />
+	<link href="../Styles/perfect-scrollbar.css" rel="stylesheet" />
+	<script src="../../../Modules/Orchard.jQuery/scripts/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script src="../scripts/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+	<div class="really-area">
+
+		<div class="slide-box">
+
+			<!-- шапка слайда -->
+			<div class="slide-header">
+				<span class="sh-title">Неужели это так?</span>
+			</div>
+
+			<!-- тело слайда -->
+			<div class="slide-body">
+				<div class="sb-img">
+					<img src="../Content/test-2.jpg" alt="">
+				</div>
+				<div class="sb-questionary-box">
+					<span class="sbq-question">Сколько литров материнского молока выпивает в сутки новорожденный детеныш синего кита?</span>
+					<div class="sbq-answer">
+						<input id="checkbox_id1" class="sbq-checkbox" type="radio" name="test">
+						<label for="checkbox_id1" class="sbq-label">Около 10 литров (обычное ведро)</label>
+					</div>
+					<div class="sbq-answer">
+						<input id="checkbox_id2" class="sbq-checkbox" type="radio" name="test">
+						<label for="checkbox_id2" class="sbq-label">Около 80 литров</label>
+					</div>
+					<div class="sbq-answer">
+						<input id="checkbox_id3" class="sbq-checkbox" type="radio" name="test">
+						<label for="checkbox_id3" class="sbq-label">Около 400 литров (2 стандартные ванны)</label>
+					</div>
+					<div class="sbq-answer">
+						<input id="checkbox_id4" class="sbq-checkbox" type="radio" name="test">
+						<label for="checkbox_id4" class="sbq-label">Около 1000 литров</label>
+					</div>
+					<div class="sbq-result-row">
+						<a href="" class="sbq-button-check">Проверить</a>
+						<span class="sbq-result-correctly">Верно!</span>
+						<span class="sbq-result-wrong">Неверно!</span>
+					</div>
+					<div class="sbq-text-box">
+						<span class="sbq-text">Детеныш синего кита рождается длиной 7,6 метра и массой 2-3 тонны. Каждые сутки он выпивает около 380 литров материнского молока, благодаря чему прибавляет в весе от 80 до 100 кг, а в длину 2-3 см.</span>
+					</div>
+					<div class="sbq-button-row">
+						<a href="#" class="sbq-button-more" onclick="OpenRealyModal()">Узнать больше</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- подвал слайда -->
+			<div class="slide-footer">
+				<div class="sf-control">
+					<a href="" class="sf-left">Предыдущий вопрос</a>
+				</div>
+				<a href="" class="sf-button">В начало</a>
+				<div class="sf-control">
+					<a href="" class="sf-right">Следующий вопрос</a>
+				</div>
+			</div>
+
+		</div>
+
+		<!--               Модальное окно -->
+
+		<div class="fixed-overlay hide">
+			<div class="modal">
+				<div class="modal-container">
+					<div class="modal-really-more hide">
+						<div class="modal-close" onclick="CloseRealyModal()"></div>
+						<div class="mrm-text-cut custom-scroll">
+							<span class="mrm-text">
+								Синие киты являются крупнейшими животными, когда-либо жившими на земле. Взрослые синие киты весят около 160 тонн, а их длина обычно не превышает 30 м. Эти животные живут в среднем 80-90 лет. Питаются они крилем (мелкие морские рачки) и съедают в день
+								около 4 тонн. У синего кита нет зубов, их заменяют усы, которые свисают с верхней челюсти. Они состоят из кератина, материала, похожего на ногти, далее превращаются в тонкие волоски во рту рядом с языком. Кит набирает очень большое количество
+								воды в рот, а затем выпускает ее обратно. Когда вода вытесняется из полости рта, пластины китового уса действуют как сито и задерживают криль.
+							</span>
+							<a href="#" class="mrm-link">Источник информации</a>
+							<img src="../Content/test.jpg" alt="" class="mrm-img">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--               Модальное окно -->
+
+	</div>
+
+	<script type="text/javascript">
+		function CloseRealyModal() {
+			$('.modal-really-more').addClass('hide');
+			$('.fixed-overlay').addClass('hide');
+
+		}
+
+		function OpenRealyModal() {
+			$('.modal-really-more').removeClass('hide');
+			$('.fixed-overlay').removeClass('hide');
+		}
+	</script>
+
+	<script>
+		$(document).ready(function() {
+			$('.custom-scroll').perfectScrollbar();
+		});
+	</script>
+</body>
+
+</html>

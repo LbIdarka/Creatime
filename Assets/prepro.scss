@@ -1,0 +1,22 @@
+/*Важно! Не изменяйте эту CSS. Используйте препроцессор SASS*/
+
+@import "../Content/sprite.sprite.scss"; // Иконки
+
+@import "_normalize"; // normalize.css v3.0.2 | MIT License | git.io/normalize
+@import "_general"; // общие полезные переиспользуемые стили
+@import "_footer"; // часть стилей для подвала
+@import "_header"; // шапка частично с виджетом
+@import "_modals"; // модальные окна
+@import "_verticalmenu"; // #aside-first вертикальное меню на некоторых страницах
+@import "_small-box"; // мелкие переиспользуемые блочки с модификаторами
+@import "_courses"; // стили курсов
+@import "_cases"; //стили кейсов
+@import "_comments"; // стили комментариев
+@import "_search";  // стили для форм поиска
+@import "_calendar";  // стили для страницы с календарем
+@import "_thinks";  // стили для заметок
+@import "_price"; // стили для стоимости курсов
+@import "_common"; // основные стили
+
+@import "_teachers.scss";
+

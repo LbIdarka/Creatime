@@ -1,0 +1,65 @@
+/*CAPTION*/
+#aside-first {
+	display: inline-block;
+	// border: 1px solid #000;
+	width: 180px;
+	margin-right: 45px;
+	// vertical-align: top;
+	// white-space: initial;
+    // @include w767 {
+    //   padding: 0 10px;
+    // }
+}
+#aside-first header h1 {
+	display: none;
+}
+.widget-aside-first .menu li a {
+	padding: 0 0 13px;
+	font: bold 16px "FiraSans", sans-serif;
+}
+.widget-aside-first {
+	.menu {
+		margin: 0;
+		padding: 0;
+		li {
+			display: block;
+			width: 100%;
+			margin-bottom: 13px;
+		}
+		.lb_counter {
+			//проверяет состояние счетчика сообщений в шапке и дублирует в боковое меню
+	    position: relative;
+	    top: -7px;
+	    right: -2px;
+        height: 17px;
+        line-height: 11px;
+			@extend %counter;
+		}
+		li a {
+			@extend %link-black;
+		}
+		.active a {
+			color: #F86005;
+		}
+	}
+}
+// .widget-aside-first .menu {/*otherwise last menu element goes to the previous row*/
+//     width: 250px;
+// }
+// .widget-aside-first .menu li {
+//     clear:both;
+// }
+// .widget-aside-first .menu li a:hover,
+//  .widget-aside-first .menu li a:active {/*to do not any hover glow*/
+//     background: #eaeaea;
+// }
+// .widget-aside-first .menu li a:first-letter {
+//     text-transform: uppercase;
+// }
+// /*selected menu item (left menu)*/
+// .widget-aside-first .menu .active a{
+//     color: #ff6100;
+// }
+// .member-name-container {
+//     font-weight: bold;
+// }

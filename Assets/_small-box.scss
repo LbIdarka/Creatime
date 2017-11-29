@@ -1,0 +1,191 @@
+// мелкие блочки, которые переиспользуются на сайте с модификаторами для позиционирования
+// этот файл можно менять только с согласования
+// ______________ мелкий блочок с социальными иконками, который одинаково выглядит по всему сайту
+// для позиционирования вешайте класс рядом с .social-box
+.social-box {
+	display: inline-block;
+	padding-left: 0;
+	font-size: 0;
+	.sb-item {
+		display: inline-block;
+        &:before{
+            content: none !important;
+        }
+	}
+	.show{
+        @include sprite-show;
+		&:hover {
+            @include sprite-show-hover;
+		}
+	}
+	.print {
+        @include sprite-print;
+		&:hover {
+            @include sprite-print-hover;
+		}
+	}
+	.fb {
+        @include sprite-social-fb;
+		margin-left: -5px;
+		&:hover {
+            @include sprite-social-fb-hover;
+		}
+	}
+	.vk {
+        @include sprite-social-vk;
+		width: 40px;
+		margin-left: -4px;
+		&:hover {
+            @include sprite-social-vk-hover;
+		}
+	}
+	.twitter {
+        @include sprite-social-twitter;
+		margin-left: -4px;
+		&:hover {
+            @include sprite-social-twitter-hover;
+		}
+	}
+	.gplus {
+        @include sprite-social-gplus;
+		margin-left: -5px;
+		&:hover {
+            @include sprite-social-gplus-hover;
+		}
+	}
+    .inst{
+        @include sprite-social-insta;
+		margin-left: -5px;
+		&:hover {
+            @include sprite-social-insta-hover;
+		}
+    }
+	.sb-button-box {
+		//добавили кнопку с покупкой http://localhost:30321/PersonalArea/Achievements
+		display: block;
+		@extend .clearfix;
+	}
+	.sb-message-box{
+		 font: normal 13px Arial, sans-serif;
+		 max-width: 182px;
+		 text-align: right;
+	}
+	.price-button {
+		margin-top: 10px;
+		float: right;
+		@extend .button-small;
+		@extend .button-orange;
+	}
+}
+// ______________ мелкий блочок с сортировкой
+// для позиционирования вешайте класс рядом с .sort-box, сортировка осталась старая, часть классов не нужна, часть используется итого + #sort ((((
+.sort-box,
+#sort {
+	.sb-text {
+		font: normal 15px "Arial", sans-serif;
+		color: #666666;
+		margin-right: 16px;
+	}
+	.sb-link {
+		font: normal 15px "Arial", sans-serif;
+		@extend .dotted-link;
+		color: #000;
+		display: inline-block;
+		margin-right: 15px;
+		&:hover {
+			color: #F86005;
+		}
+	}
+	.sb-link.active {
+		border-bottom: none;
+		padding: 6px 23px 6px 10px;
+		background: #fff;
+		border-radius: 12px;
+		position: relative;
+		&:after {
+			content: '';
+            @include sprite-sort-arrow;
+			position: absolute;
+			top: 10px;
+			right: 7px;
+		}
+		&:hover {
+			color: #000;
+		}
+	}
+}
+
+//  блок с достижениями, используется минимум в двух местах, но с разной заполненностью
+//  Start personal area -> achievements  //
+.summary-achievements {
+	background: #fff;
+	padding: 20px;
+	margin-bottom: 30px;
+	@extend .clearfix;
+	&.mod-position {
+		margin-top: 20px;
+	}
+	.sa-achiev-1 {
+		position: relative;
+		margin: auto 15px auto 25px;
+		top: 3px;
+		// @extend %link-black;
+		// @extend .dotted-link;
+		color: #000;
+        pointer-events: none;
+		&:before {
+			content: '';
+			@include sprite-brain;
+			position: absolute;
+			left: -22px;
+			top: 0;
+			vertical-align: middle;
+		}
+	}
+	.sa-achiev-2 {
+		display: inline-block;
+		position: relative;
+		margin: auto 10px auto 25px;
+		top: 3px;
+		// @extend %link-black;
+		// @extend .dotted-link;
+		color: #000;
+        pointer-events: none;
+		@include w346 {
+			//http://localhost:30321/PersonalArea/Achievements
+			margin-top: 15px;
+		}
+		&:before {
+			content: '';
+            @include sprite-certificate;
+			position: absolute;
+			left: -25px;
+			top: 0;
+			vertical-align: middle;
+		}
+	}
+	.sa-invite {
+		position: relative;
+		margin: auto 15px auto 25px;
+		@extend %link-black;
+		@extend .dotted-link;
+		&:before {
+			content: '';
+            @include sprite-video-small;
+			position: absolute;
+			left: -25px;
+			top: 0;
+			vertical-align: middle;
+		}
+	}
+	.sa-button {
+		@extend .button-orange;
+		@extend .button-small;
+		float: right;
+		@include w445 {
+			float: none;
+			display: table;
+			margin-top: 15px;
+		}
+	}
+}

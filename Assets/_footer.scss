@@ -1,0 +1,82 @@
+// Sticky Footer
+// Always be careful with margin collapsing (that's why I put padding on header and footer)
+$header-height: 116px;
+$footer-height: 67px;
+$footer-padding-tb:15px;
+#navbar-wrapper {
+	height: $header-height;
+}
+#main-content-spec {
+	// This is where the magic happens.
+	min-height: calc(100vh - #{$header-height + $footer-height});
+}
+.prefooter {
+    color: #808080;
+    font-size: 11px;
+    padding-top: 30px;
+    & > a {
+        font-size: 11px;
+    }
+}
+.footer-wrapper {
+	height: $footer-height - 15px;
+}
+#layout-footer {
+	@extend .width;
+}
+.credits {
+	display: none;
+}
+.footer-wrapper {
+	@extend .clearfix;
+	padding: 24px 0 40px 0;
+	@include w445 {
+		margin-bottom: 24px;
+	}
+	.fw-responcive-box {
+		display: inline-block;
+		@include w445 {
+			width: 137px;
+		}
+	}
+	.foot-copyright {
+		font: normal 13px/1 "Arial", sans-serif;
+		display: inline-block;
+		margin-right: 34px;
+		@include w445 {
+			margin-right: 0;
+		}
+	}
+	.foot-info {
+		font: normal 13px/1 "Arial", sans-serif;
+		display: inline-block;
+		@include w445 {
+			margin-top: 10px;
+			display: inline-block;
+		}
+	}
+	.foot-share {
+		display: inline-block;
+		float: right;
+		@include w445 {}
+	}
+}
+#toTop {
+	//стрелка наверх, досталась от темы, не выгенеривалась, но увеличивала высоту подвала на некоторых страницах
+	display: none!important;
+}
+// _____________ старые димины стили _____________ //
+// .footer-wrapper{
+// // .copyright{
+// //     margin-right: 30px;
+// // }
+// // div{
+// //   display: inline-block;
+// //    }
+// // .social-networks-wrapper{
+// //   float: right;
+// // }
+// }
+// #layout-footer {
+// @extend .clearfix;
+// }

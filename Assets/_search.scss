@@ -1,0 +1,115 @@
+@mixin text_font {
+	font: normal 16px Arial, sans-serif;
+}
+
+	#search-input {
+    border: solid 1px #c3c3c3!important;
+}
+// @mixin search_input_style{
+//   border: 1px solid rgba(142, 142, 142, 0.35) !important;
+//   width: 50% !important;
+//   background-color: #eaeaea;
+//     font-size: 0.8em;
+//     padding: 5px;
+// }
+.search-form {
+	#q,
+	#search-input {
+		// @include search_input_style;
+		width: 100%;
+		padding-right: 30px;
+		@extend .input-base;
+		@extend %input32;
+	}
+	.search-img {
+		display: inline-block;
+		width: 50%;
+		position: relative;
+@include w700 {
+		width: 80%;
+}
+		/*&:after {
+			content: '';
+			background: sprite($icons, search) no-repeat;
+			height: 19px;
+			width: 21px;
+			display: inline-block;
+			position: absolute;
+			right: 7px;
+			top: 5px;
+		}*/
+	}
+}
+// .search-icon {
+// 	display: inline-block;
+// 	margin-left: -32px;
+// 	margin-top: 5px;
+// 	background-color: #eaeaea;
+// 	width: 25px;
+// 	padding-left: 4px;
+// 	height: 26px;
+// }
+.search-number {
+	width: 3%;
+	height: 100%;
+	display: inline-block;
+	vertical-align: top;
+}
+.search-content {
+	@include text_font;
+	display: inline-block;
+	width: 90%;
+  margin-bottom: 15px;
+	li {
+		display: list-item;
+		margin: 25px -20px;
+		padding-left: 2%;
+		&:before {
+			margin: 0;
+		}
+	}
+}
+.search-block {
+	width: 100%;
+	margin: 25px 0;
+}
+.search-note-title {
+	color: #949494;
+}
+.search-node {
+	font: normal 15px Arial, sans-serif;
+	display: inline-block;
+	margin-right: 10px;
+}
+.search-text-summary {
+	margin-bottom: 10px;
+}
+.search-results-title {
+	font: normal 25px "GetVoIP Grotesque", sans-serif;
+}
+// поиск в шапке
+.header-search-img {
+	display: inline-block;
+	position: relative;
+	/*&:after {
+		content: '';
+		background: sprite($icons, search) no-repeat;
+		height: 19px;
+		width: 21px;
+		display: inline-block;
+		position: absolute;
+		right: -22px;
+		top: -1px;
+	}*/
+    .search-button{
+        @include sprite-search;
+        position: absolute;
+        right: -22px;
+        top: -1px;
+        &:hover {
+            @include sprite-search-hover;
+            right: -22px;
+        top: -1px;
+        }
+    }
+}
