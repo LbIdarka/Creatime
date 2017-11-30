@@ -9773,4 +9773,8 @@ a[href*="&&_FILES"] {
     width: 100%; }
   .teacher__about,
   .teacher__adress {
-    margin-top: 12px; } }
+    margin-top: 12px; }
+  .teacher__email-tooltip {
+    top: -87px;
+    left: -53px;
+    padding: 30px; } }

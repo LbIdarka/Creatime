@@ -200,11 +200,10 @@
   box-shadow: 0 0 20px 0px #c3c3c3;
   z-index: 1;
 }
-  
 
-  .teacher__adress:hover .teacher__email-tooltip {
-    display: inline-block;
-  }
+.teacher__adress:hover .teacher__email-tooltip {
+  display: inline-block;
+}
 
 
 .teacher__about {
@@ -335,6 +334,12 @@
   .teacher__about,
   .teacher__adress {
     margin-top: 12px;
+  }
+
+  .teacher__email-tooltip {
+    top: -87px;
+    left: -53px;
+    padding: 30px;
   }
 
 }
