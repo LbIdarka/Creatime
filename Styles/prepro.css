@@ -9633,7 +9633,6 @@ a[href*="&&_FILES"] {
     border-radius: 50%; }
 
 .teacher__info {
-  position: relative;
   float: right;
   width: 495px; }
 
@@ -9644,6 +9643,7 @@ a[href*="&&_FILES"] {
   color: #000000; }
 
 .teacher__adress {
+  position: relative;
   margin: 0;
   margin-top: 5px;
   font: normal 13px/1 Arial, sans-serif;
@@ -9673,9 +9673,11 @@ a[href*="&&_FILES"] {
 .teacher__email-tooltip {
   display: none;
   position: absolute;
-  top: -112px;
+  top: -137px;
   left: 58px;
   padding: 60px; }
+  .teacher__email-tooltip a {
+    font-size: inherit; }
 
 .teacher__email-tooltip b {
   display: inline-block;

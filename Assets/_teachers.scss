@@ -133,7 +133,6 @@
 }
 
 .teacher__info {
-  position: relative;
   float: right;
   width: 495px;
 }
@@ -146,7 +145,7 @@
 }
 
 .teacher__adress {
-  
+  position: relative;
   margin: 0;
   margin-top: 5px;
   font: normal 13px/1 Arial, sans-serif;
@@ -183,9 +182,13 @@
 .teacher__email-tooltip {
   display: none;
   position: absolute;
-  top: -112px;
+  top: -137px;
   left: 58px;
   padding: 60px;
+
+  a {
+    font-size: inherit;
+  }
 }
 
 .teacher__email-tooltip b {
