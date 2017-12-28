@@ -9571,7 +9571,7 @@ a[href*="&&_FILES"] {
 .filter__item input,
 .filter__item select {
   width: 100%;
-  padding: 7px 9px;
+  padding: 5px 9px;
   font: normal 13px/1 Arial, sans-serif;
   border: 1px solid #c3c3c3; }
   .filter__item input:hover,
@@ -9592,8 +9592,12 @@ a[href*="&&_FILES"] {
   margin-top: 0; }
 
 .filter__item-select--arrow {
-  background-image: "../Content/select.png";
-  background-repeat: no-repeat; }
+  width: 13px;
+  height: 8px;
+  display: inline-block;
+  background: url("../Content/sprite.sprite.png") -10px -3180px no-repeat;
+  height: auto;
+  background-position: 150px -3170px; }
 
 .filter__btn {
   display: block;
@@ -9653,9 +9657,12 @@ a[href*="&&_FILES"] {
   margin: 0;
   margin-left: 22px;
   padding-right: 20px;
-  background-image: url("../Content/tooltip.png");
-  background-repeat: no-repeat;
-  background-position: 100% 0;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  background: url("../Content/sprite.sprite.png") -10px -3198px no-repeat;
+  width: auto;
+  background-position-x: 64px;
   cursor: pointer; }
   .teacher__email--opened {
     margin-left: 20px;
@@ -9664,9 +9671,12 @@ a[href*="&&_FILES"] {
     font: inherit;
     color: inherit;
     text-decoration: none;
-    background-image: url("../Content/email.png");
-    background-repeat: no-repeat;
-    background-position: 0 5px; }
+    width: 10px;
+    height: 7px;
+    display: inline-block;
+    background: url("../Content/sprite.sprite.png") -10px -3163px no-repeat;
+    height: auto;
+    background-position-y: -3159px; }
     .teacher__email--opened:hover {
       color: #F86005; }
 
@@ -9776,6 +9786,12 @@ a[href*="&&_FILES"] {
   .teacher__about,
   .teacher__adress {
     margin-top: 12px; }
+  .teacher__email {
+    width: 100%;
+    margin-left: 0;
+    line-height: 1.5; }
+    .teacher__email--opened {
+      background-position-y: -3156px; }
   .teacher__email-tooltip {
     top: -87px;
     left: -53px;
