@@ -1,0 +1,51 @@
+h1 {
+  padding-top: 65px;
+}
+
+.profile__foto {
+  float: left;
+}
+
+.profile__data {
+  float: left;
+  margin-left: 50px;
+  line-height: 2;
+  color: #000000;
+  border-collapse: collapse;
+
+  td:nth-child(even) {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+  .width {
+    padding: 0 10px;
+  }
+
+  h1 {
+    padding-top: 35px;
+    text-align: center;
+  }
+
+  .profile__data,
+  .profile__foto {
+    display: block;
+  }
+
+  .profile__foto {
+    width: 100%;
+    text-align: center;
+  }
+
+  .profile__data {
+    margin: 0;
+    padding-top: 20px;
+    line-height: 1.7;
+
+    tr {
+      vertical-align: top;
+    }
+  }
+}

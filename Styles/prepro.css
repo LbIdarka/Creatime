@@ -9796,3 +9796,37 @@ a[href*="&&_FILES"] {
     top: -87px;
     left: -53px;
     padding: 30px; } }
+
+h1 {
+  padding-top: 65px; }
+
+.profile__foto {
+  float: left; }
+
+.profile__data {
+  float: left;
+  margin-left: 50px;
+  line-height: 2;
+  color: #000000;
+  border-collapse: collapse; }
+  .profile__data td:nth-child(even) {
+    padding-left: 10px; }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .width, .zone-content, #layout-footer, .widget-BlogSearch, .widget-TagCloud, .breadcrumb, .page-techer__title {
+    padding: 0 10px; }
+  h1 {
+    padding-top: 35px;
+    text-align: center; }
+  .profile__data,
+  .profile__foto {
+    display: block; }
+  .profile__foto {
+    width: 100%;
+    text-align: center; }
+  .profile__data {
+    margin: 0;
+    padding-top: 20px;
+    line-height: 1.7; }
+    .profile__data tr {
+      vertical-align: top; } }
