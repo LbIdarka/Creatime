@@ -9797,7 +9797,7 @@ a[href*="&&_FILES"] {
     left: -53px;
     padding: 30px; } }
 
-h1 {
+.caption-page {
   padding-top: 65px; }
 
 .profile__foto {
@@ -9812,10 +9812,59 @@ h1 {
   .profile__data td:nth-child(even) {
     padding-left: 10px; }
 
+.email__teacher {
+  position: relative;
+  padding-right: 20px;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  background: url("../Content/sprite.sprite.png") -10px -3198px no-repeat;
+  width: auto;
+  height: auto;
+  background-position: 90px -3190px;
+  cursor: pointer; }
+
+.email__teacher-opened {
+  display: none; }
+  .email__teacher-opened a {
+    padding-left: 15px;
+    color: inherit;
+    text-decoration: none;
+    width: 10px;
+    height: 7px;
+    display: inline-block;
+    background: url("../Content/sprite.sprite.png") -10px -3163px no-repeat;
+    height: auto;
+    background-position-y: -3157px; }
+    .email__teacher-opened a:hover {
+      color: #F86005; }
+
+.email__teacher-tooltip {
+  display: none;
+  position: absolute;
+  top: -70px;
+  left: 0;
+  width: 275px;
+  margin-left: 5px;
+  padding: 16px 30px;
+  font: normal 13px/1.5 Arial, sans-serif;
+  color: #000000;
+  background: #ffffff;
+  box-shadow: 0 0 20px 0px #c3c3c3;
+  z-index: 1; }
+  .email__teacher-tooltip a {
+    font: inherit; }
+
+.email__teacher:hover .email__teacher-tooltip {
+  display: block; }
+
+.profile__desc-text {
+  font: normal 16px/1.5 Arial, sans-serif; }
+
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .width, .zone-content, #layout-footer, .widget-BlogSearch, .widget-TagCloud, .breadcrumb, .page-techer__title {
     padding: 0 10px; }
-  h1 {
+  .caption-page {
     padding-top: 35px;
     text-align: center; }
   .profile__data,
@@ -9829,4 +9878,6 @@ h1 {
     padding-top: 20px;
     line-height: 1.7; }
     .profile__data tr {
-      vertical-align: top; } }
+      vertical-align: top; }
+  .email__teacher-tooltip {
+    left: -100px; } }

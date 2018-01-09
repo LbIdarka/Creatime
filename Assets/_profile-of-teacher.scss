@@ -1,4 +1,4 @@
-h1 {
+.caption-page {
   padding-top: 65px;
 }
 
@@ -18,13 +18,67 @@ h1 {
   }
 }
 
+.email__teacher {
+  position: relative;
+  padding-right: 20px;
+    @include sprite-tooltip;
+    width: auto;
+    height: auto;
+    background-position: 90px -3190px;
+    cursor: pointer;
+}
+
+.email__teacher-opened {
+  display: none;
+
+  a {
+    padding-left: 15px;
+    color: inherit;
+    text-decoration: none;
+    @include sprite-email;
+    height: auto;
+    background-position-y: -3157px;
+
+    &:hover {
+      color: #F86005;
+    }
+  }
+}
+
+.email__teacher-tooltip {
+  display: none;
+  position: absolute;
+  top: -70px;
+  left: 0;
+  width: 275px;
+  margin-left: 5px;
+  padding: 16px 30px;
+  font: normal 13px/1.5 Arial, sans-serif;
+  color: #000000;
+  background: #ffffff;
+  box-shadow: 0 0 20px 0px #c3c3c3;
+  z-index: 1;
+
+  a {
+    font: inherit;
+  }
+}
+
+.email__teacher:hover .email__teacher-tooltip {
+  display: block;
+}
+
+.profile__desc-text {
+  font: normal 16px/1.5 Arial, sans-serif;
+}
+
 @media screen and (min-width: 320px) and (max-width: 767px) {
 
   .width {
     padding: 0 10px;
   }
 
-  h1 {
+  .caption-page {
     padding-top: 35px;
     text-align: center;
   }
@@ -47,5 +101,9 @@ h1 {
     tr {
       vertical-align: top;
     }
+  }
+
+  .email__teacher-tooltip {
+    left: -100px;
   }
 }

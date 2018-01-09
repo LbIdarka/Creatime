@@ -23,7 +23,7 @@ gulp.task("style", function() {
 gulp.task("serve", ["style"], function() {
   server.init({
     server: ".",
-    index: "HTML/profile-of-teacher.html",
+    index: "HTML/teachers.html",
     notify: false,
     open: true,
     cors: true,
