@@ -146,69 +146,70 @@
 }
 
 .teacher__adress {
-  position: relative;
   margin: 0;
   margin-top: 5px;
-  font: normal 13px/1 Arial, sans-serif;
-  color: #909090;
 }
 
-.teacher__email {
-  margin: 0;
-  margin-left: 22px;
-  padding-right: 20px;
-  @include sprite-tooltip;
-  width: auto;
-  background-position-x: 64px;
-  cursor: pointer;
+// .teacher__adress-cell {
+//   position: relative;
+//   font: normal 13px/1 Arial, sans-serif;
+//   color: #909090;
+// }
+
+// .teacher__email {
+//   margin: 0;
+//   margin-left: 22px;
+//   padding-right: 20px;
+//   width: auto;
+//   background-position-x: 64px;
+//   cursor: pointer;
 
 
-  &--opened {
-    margin-left: 20px;
-    padding-right: 0;
-    padding-left: 20px;
-    font: inherit;
-    color: inherit;
-    text-decoration: none;
-    @include sprite-email;
-    height: auto;
-    background-position-y: -3159px;
+//   &--opened {
+//     margin-left: 20px;
+//     padding-right: 0;
+//     padding-left: 20px;
+//     font: inherit;
+//     color: inherit;
+//     text-decoration: none;
+//     @include sprite-email;
+//     height: auto;
+//     background-position-y: -3159px;
 
-    &:hover {
-      color: #F86005;
-    }
-  }
-}
+//     &:hover {
+//       color: #F86005;
+//     }
+//   }
+// }
 
-.teacher__email-tooltip {
-  display: none;
-  position: absolute;
-  top: -137px;
-  left: 58px;
-  padding: 60px;
+// .teacher__email-tooltip {
+//   display: none;
+//   position: absolute;
+//   top: -137px;
+//   left: 58px;
+//   padding: 60px;
 
-  a {
-    font-size: inherit;
-  }
-}
+//   a {
+//     font-size: inherit;
+//   }
+// }
 
-.teacher__email-tooltip b {
-  display: inline-block;
-  width: 275px;
-  margin-left: 5px;
-  padding: 16px 30px;
-  vertical-align: top;
-  font: normal 13px/1.5 Arial, sans-serif;
-  color: #000000;
-  background: #ffffff;
-  box-shadow: 0 0 20px 0px #c3c3c3;
-  z-index: 1;
-}
+// .teacher__email-tooltip b {
+//   display: inline-block;
+//   width: 275px;
+//   margin-left: 5px;
+//   padding: 16px 30px;
+//   vertical-align: top;
+//   font: normal 13px/1.5 Arial, sans-serif;
+//   color: #000000;
+//   background: #ffffff;
+//   box-shadow: 0 0 20px 0px #c3c3c3;
+//   z-index: 1;
+// }
 
-.teacher__adress:hover .teacher__email-tooltip {
-  display: inline-block;
-}
-
+// .teacher__adress:hover .teacher__email-tooltip {
+//   display: inline-block;
+// }
 
 .teacher__about {
   width: 100%;
@@ -218,10 +219,18 @@
   border-collapse: collapse;
 }
 
-.teacher__about-cell--bold {
-  width: 125px;
-  font-weight: bold;
-  vertical-align: top;
+.teacher__about-cell {
+  min-width: 170px;
+
+  &--bold {
+    width: 125px;
+    font-weight: bold;
+    vertical-align: top;
+  }
+
+  &--color {
+    color: #909090;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1000px) {
@@ -340,20 +349,7 @@
     margin-top: 12px;
   }
 
-  .teacher__email {
-    width: 100%;
-    margin-left: 0;
-    line-height: 1.5;
-    
-    &--opened {
-      background-position-y: -3156px;
-    }
+  .teacher__about-cell {
+    min-width: 120px;
   }
-
-  .teacher__email-tooltip {
-    top: -87px;
-    left: -53px;
-    padding: 30px;
-  }
-
 }

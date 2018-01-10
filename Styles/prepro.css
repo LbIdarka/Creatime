@@ -9647,62 +9647,8 @@ a[href*="&&_FILES"] {
   color: #000000; }
 
 .teacher__adress {
-  position: relative;
   margin: 0;
-  margin-top: 5px;
-  font: normal 13px/1 Arial, sans-serif;
-  color: #909090; }
-
-.teacher__email {
-  margin: 0;
-  margin-left: 22px;
-  padding-right: 20px;
-  width: 14px;
-  height: 14px;
-  display: inline-block;
-  background: url("../Content/sprite.sprite.png") -10px -3198px no-repeat;
-  width: auto;
-  background-position-x: 64px;
-  cursor: pointer; }
-  .teacher__email--opened {
-    margin-left: 20px;
-    padding-right: 0;
-    padding-left: 20px;
-    font: inherit;
-    color: inherit;
-    text-decoration: none;
-    width: 10px;
-    height: 7px;
-    display: inline-block;
-    background: url("../Content/sprite.sprite.png") -10px -3163px no-repeat;
-    height: auto;
-    background-position-y: -3159px; }
-    .teacher__email--opened:hover {
-      color: #F86005; }
-
-.teacher__email-tooltip {
-  display: none;
-  position: absolute;
-  top: -137px;
-  left: 58px;
-  padding: 60px; }
-  .teacher__email-tooltip a {
-    font-size: inherit; }
-
-.teacher__email-tooltip b {
-  display: inline-block;
-  width: 275px;
-  margin-left: 5px;
-  padding: 16px 30px;
-  vertical-align: top;
-  font: normal 13px/1.5 Arial, sans-serif;
-  color: #000000;
-  background: #ffffff;
-  box-shadow: 0 0 20px 0px #c3c3c3;
-  z-index: 1; }
-
-.teacher__adress:hover .teacher__email-tooltip {
-  display: inline-block; }
+  margin-top: 5px; }
 
 .teacher__about {
   width: 100%;
@@ -9711,10 +9657,14 @@ a[href*="&&_FILES"] {
   color: #000000;
   border-collapse: collapse; }
 
-.teacher__about-cell--bold {
-  width: 125px;
-  font-weight: bold;
-  vertical-align: top; }
+.teacher__about-cell {
+  min-width: 170px; }
+  .teacher__about-cell--bold {
+    width: 125px;
+    font-weight: bold;
+    vertical-align: top; }
+  .teacher__about-cell--color {
+    color: #909090; }
 
 @media screen and (min-width: 768px) and (max-width: 1000px) {
   .filter {
@@ -9786,16 +9736,8 @@ a[href*="&&_FILES"] {
   .teacher__about,
   .teacher__adress {
     margin-top: 12px; }
-  .teacher__email {
-    width: 100%;
-    margin-left: 0;
-    line-height: 1.5; }
-    .teacher__email--opened {
-      background-position-y: -3156px; }
-  .teacher__email-tooltip {
-    top: -87px;
-    left: -53px;
-    padding: 30px; } }
+  .teacher__about-cell {
+    min-width: 120px; } }
 
 .caption-page {
   padding-top: 65px; }
@@ -9809,8 +9751,8 @@ a[href*="&&_FILES"] {
   line-height: 2;
   color: #000000;
   border-collapse: collapse; }
-  .profile__data td:nth-child(even) {
-    padding-left: 10px; }
+  .profile__data td {
+    min-width: 170px; }
 
 .email__teacher {
   position: relative;
@@ -9823,21 +9765,22 @@ a[href*="&&_FILES"] {
   height: auto;
   background-position: 90px -3190px;
   cursor: pointer; }
+  .email__teacher--position {
+    padding-right: 0;
+    background-position: 65px -3195px; }
 
-.email__teacher-opened {
-  display: none; }
-  .email__teacher-opened a {
-    padding-left: 15px;
-    color: inherit;
-    text-decoration: none;
-    width: 10px;
-    height: 7px;
-    display: inline-block;
-    background: url("../Content/sprite.sprite.png") -10px -3163px no-repeat;
-    height: auto;
-    background-position-y: -3157px; }
-    .email__teacher-opened a:hover {
-      color: #F86005; }
+.email__teacher-opened a {
+  padding-left: 15px;
+  font-size: inherit;
+  text-decoration: none;
+  width: 10px;
+  height: 7px;
+  display: inline-block;
+  background: url("../Content/sprite.sprite.png") -10px -3163px no-repeat;
+  height: auto;
+  background-position-y: -3158px; }
+  .email__teacher-opened a:hover {
+    color: #F86005; }
 
 .email__teacher-tooltip {
   display: none;
@@ -9879,5 +9822,7 @@ a[href*="&&_FILES"] {
     line-height: 1.7; }
     .profile__data tr {
       vertical-align: top; }
+    .profile__data td {
+      min-width: 120px; }
   .email__teacher-tooltip {
-    left: -100px; } }
+    left: -130px; } }

@@ -13,37 +13,41 @@
   color: #000000;
   border-collapse: collapse;
 
-  td:nth-child(even) {
-    padding-left: 10px;
+  td {
+    min-width: 170px;
   }
 }
 
 .email__teacher {
   position: relative;
   padding-right: 20px;
-    @include sprite-tooltip;
-    width: auto;
-    height: auto;
-    background-position: 90px -3190px;
-    cursor: pointer;
+  @include sprite-tooltip;
+  width: auto;
+  height: auto;
+  background-position: 90px -3190px;
+  cursor: pointer;
+
+  &--position {
+    padding-right: 0;
+    background-position: 65px -3195px;
+  }
 }
 
 .email__teacher-opened {
-  display: none;
-
   a {
     padding-left: 15px;
-    color: inherit;
+    font-size: inherit;
     text-decoration: none;
     @include sprite-email;
     height: auto;
-    background-position-y: -3157px;
+    background-position-y: -3158px;
 
     &:hover {
       color: #F86005;
     }
   }
 }
+
 
 .email__teacher-tooltip {
   display: none;
@@ -101,9 +105,13 @@
     tr {
       vertical-align: top;
     }
+
+    td {
+      min-width: 120px;
+    }
   }
 
   .email__teacher-tooltip {
-    left: -100px;
+    left: -130px;
   }
 }
