@@ -34,61 +34,116 @@ sup a {
 // _____________ Start engage-courusel _____________ //
 #engage-courusel {
 
+    position: relative;
+    width: 100%;
+    background-color: rgb(249,209,47);
+
     .owl-wrapper-outer {
-        // background: url(../Content/images/bkgr001.png) no-repeat;
-        //background-position: center;
-        background-color: rgb(249,209,47);
-
-        .background-container {
-            background: url(../Content/images/engage-carousel-background.png) no-repeat;
+        position: relative;
+        @extend .width;
+        padding-bottom: 40px;
+        overflow: hidden;
+        
+        &::before {
+            content: "";
             position: absolute;
-            height: 397px;
-            width: 50%;
-            top: -66px;
-            right: 0;
-
-            @include w762 {
-                display: none;
-            }
-        }
-
-        .owo-text {
-            font: normal 20px "FiraSans", sans-serif;
-            position: absolute;
-            width: 370px;
-            top: 45%;
-            left: 50%;
-            text-align: center;
-            color: #fff;
-            padding-left: 65px;
-            text-transform: uppercase;
-
-            @include w762 {
-                display: none;
-            }
-
-            &:hover {
-                color: #000;
-            }
-
-            p {
-                margin: 0;
-                padding: 0;
-            }
-        }
-
-        .owo-text:before {
-            @include sprite-compass;
-            content: " ";
-            position: absolute;
-            left: 55px;
-            bottom: -9px;
+            top: -75px;
+            right: 12%;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background-color: #ff830f;
         }
     }
 
+    .owl-wrapper {
+        float: left;
+        width: 50%;
+    }
+    
+    .owl-circle {
+        float: right;
+        width: 50%;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -16px;
+            right: 12%;
+            width: 365px;
+            height: 365px;
+            border-radius: 50%;
+            background-color: rgba(253, 171, 14, 0.8);
+        }
+    }
+
+    .owo-text {
+        position: relative;
+        display: block;
+        width: 370px;
+        margin-top: 30%;
+        padding-left: 65px;
+        font: normal 20px "FiraSans", sans-serif;
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase;
+
+        @include w762 {
+            display: none;
+        }
+
+        &:hover {
+            color: #000;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .owo-text:before {
+        @include sprite-compass;
+        content: " ";
+        position: absolute;
+        left: 55px;
+        bottom: -9px;
+    }
+
+    .owl-circle-link {
+        position: relative;
+        float: right;
+        width: 160px;
+        margin-top: 70px;
+        margin-right: 50px;
+        font: normal 14px "FiraSans", sans-serif;
+        text-align: center;
+        color: #fff;
+        z-index: 1;
+
+        &:hover {
+            color: #000;
+        }
+
+        &::after {
+        content: "";
+        position: absolute;
+        top: -70px;
+        right: -4%;
+        width: 165px;
+        height: 165px;
+        border-radius: 50%;
+        background-color: #f26a04;
+        z-index: -1;
+        }
+    }
+
+    .owl-item {
+        width: 300px;
+        margin-left: 85px;
+    }
+    
     .owl-slide {
-        height: 332px;
-        list-style: none;
         margin: 0;
         padding: 0;
         text-align: center;
@@ -96,29 +151,16 @@ sup a {
 
     .owl-slide p {
         width: 300px;
-        max-width: 100%;
-        position: relative;
-        /*top: 100px;*/
-         top: 80px;
-        left: 23%;
-        margin-top: 0;
+        margin: 0;
+        padding-top: 80px;
         font-size: 18px;
         text-align:left;
-
-        @include w1125 {
-            left: 10%;
-        }
-
-        @include w762 {
-            margin: auto;
-            left: 0;
-        }
     }
 
     .owl-controls {
         position: absolute;
         bottom: 40px;
-        left: 25%;
+        left: 13%;
 
         @include w1125 {
             left: 10%;
@@ -186,6 +228,40 @@ sup a {
                 @include sprite-slider-arrow-right-hover;
             }
         }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+    #engage-courusel .owl-wrapper-outer::before,
+    #engage-courusel .owl-circle::before {
+        right: 0;
+    }
+
+    #engage-courusel .owl-circle-link {
+        margin-right: 0;
+    
+        &::after {
+            top: -50px;
+        }
+    }
+}
+
+@media only screen and (max-width: 762px) {
+    .owl-wrapper-outer::before,
+    .owl-circle {
+        display: none;
+    }
+
+    .owl-wrapper {
+        width: 100%;
+    }
+
+    #engage-courusel .owl-item {
+        margin-left: 0;
+    }
+
+    #engage-courusel .owl-slide {
+        padding-bottom: 120px;
     }
 }
 
