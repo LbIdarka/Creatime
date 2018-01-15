@@ -55,11 +55,6 @@ sup a {
             background-color: #ff830f;
         }
     }
-
-    .owl-inner {
-        float: left;
-        width: 50%;
-    }
     
     .owl-circle {
         float: right;
@@ -139,9 +134,9 @@ sup a {
     }
 
     .owl-item {
+        float: left;
         display: none;
-        width: 300px;
-        margin-left: 85px;
+        width: 50%;
     }
 
     .owl-item-active {
@@ -150,6 +145,7 @@ sup a {
     
     .owl-slide {
         margin: 0;
+        margin-left: 85px;
         padding: 0;
         text-align: center;
     }
@@ -257,15 +253,8 @@ sup a {
         display: none;
     }
 
-    .owl-wrapper {
-        width: 100%;
-    }
-
-    #engage-courusel .owl-item {
-        margin-left: 0;
-    }
-
     #engage-courusel .owl-slide {
+        margin-left: 0;
         padding-bottom: 120px;
     }
 }
