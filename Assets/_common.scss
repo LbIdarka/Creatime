@@ -139,8 +139,13 @@ sup a {
     }
 
     .owl-item {
+        display: none;
         width: 300px;
         margin-left: 85px;
+    }
+
+    .owl-item-active {
+        display: block;
     }
     
     .owl-slide {

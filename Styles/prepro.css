@@ -4869,8 +4869,11 @@ sup a {
       background-color: #f26a04;
       z-index: -1; }
   #engage-courusel .owl-item {
+    display: none;
     width: 300px;
     margin-left: 85px; }
+  #engage-courusel .owl-item-active {
+    display: block; }
   #engage-courusel .owl-slide {
     margin: 0;
     padding: 0;
