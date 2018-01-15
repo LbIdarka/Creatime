@@ -753,13 +753,13 @@ button {
 body {
   min-width: 320px; }
 
-.width, .zone-content, #layout-footer, #engage-courusel .owl-wrapper-outer, .widget-BlogSearch, .widget-TagCloud, .breadcrumb, .page-techer__title {
+.width, .zone-content, #layout-footer, .widget-BlogSearch, .widget-TagCloud, .breadcrumb, .page-techer__title {
   max-width: 1000px;
   min-width: 320px;
   margin: 0 auto;
   padding: 0 20px; }
   @media only screen and (max-width: 767px) {
-    .width, .zone-content, #layout-footer, #engage-courusel .owl-wrapper-outer, .widget-BlogSearch, .widget-TagCloud, .breadcrumb, .page-techer__title {
+    .width, .zone-content, #layout-footer, .widget-BlogSearch, .widget-TagCloud, .breadcrumb, .page-techer__title {
       padding: 0 10px; } }
 
 .zone.zone-content blockquote {
@@ -4789,24 +4789,26 @@ sup a {
 
 #engage-courusel {
   position: relative;
-  width: 100%;
-  background-color: #f9d12f; }
+  overflow: hidden; }
   #engage-courusel .owl-wrapper-outer {
     position: relative;
-    padding-bottom: 40px;
-    overflow: hidden; }
+    overflow: hidden;
+    background-color: #f9d12f; }
     #engage-courusel .owl-wrapper-outer::before {
       content: "";
       position: absolute;
       top: -75px;
-      right: 12%;
+      right: 23%;
       width: 160px;
       height: 160px;
       border-radius: 50%;
       background-color: #ff830f; }
   #engage-courusel .owl-circle {
-    float: right;
-    width: 50%; }
+    position: absolute;
+    top: 0;
+    right: 22%;
+    width: 370px;
+    height: 332px; }
     #engage-courusel .owl-circle::before {
       content: "";
       position: absolute;
@@ -4817,14 +4819,14 @@ sup a {
       border-radius: 50%;
       background-color: rgba(253, 171, 14, 0.8); }
   #engage-courusel .owo-text {
-    position: relative;
-    display: block;
-    width: 370px;
-    margin-top: 30%;
-    padding-left: 65px;
     font: normal 20px "FiraSans", sans-serif;
+    position: absolute;
+    width: 370px;
+    top: 45%;
+    left: -10%;
     text-align: center;
     color: #fff;
+    padding-left: 65px;
     text-transform: uppercase; }
     @media only screen and (max-width: 762px) {
       #engage-courusel .owo-text {
@@ -4844,11 +4846,10 @@ sup a {
     left: 55px;
     bottom: -9px; }
   #engage-courusel .owl-circle-link {
-    position: relative;
-    float: right;
+    position: absolute;
+    bottom: 30px;
+    right: -20px;
     width: 160px;
-    margin-top: 70px;
-    margin-right: 50px;
     font: normal 14px "FiraSans", sans-serif;
     text-align: center;
     color: #fff;
@@ -4865,23 +4866,29 @@ sup a {
       border-radius: 50%;
       background-color: #f26a04;
       z-index: -1; }
-  #engage-courusel .owl-item {
-    float: left;
-    display: none;
-    width: 50%; }
-  #engage-courusel .owl-item-active {
-    display: block; }
   #engage-courusel .owl-slide {
+    height: 332px;
+    list-style: none;
     margin: 0;
-    margin-left: 85px;
     padding: 0;
     text-align: center; }
   #engage-courusel .owl-slide p {
     width: 300px;
-    margin: 0;
-    padding-top: 80px;
+    max-width: 100%;
+    position: relative;
+    /*top: 100px;*/
+    top: 80px;
+    left: 23%;
+    margin-top: 0;
     font-size: 18px;
     text-align: left; }
+    @media only screen and (max-width: 1125px) {
+      #engage-courusel .owl-slide p {
+        left: 10%; } }
+    @media only screen and (max-width: 762px) {
+      #engage-courusel .owl-slide p {
+        margin: auto;
+        left: 0; } }
   #engage-courusel .owl-controls {
     position: absolute;
     bottom: 40px;
@@ -4941,8 +4948,9 @@ sup a {
         background: url("../Content/sprite.sprite.png") -10px -2269px no-repeat; }
 
 @media screen and (min-width: 768px) and (max-width: 1000px) {
-  #engage-courusel .owl-wrapper-outer::before,
-  #engage-courusel .owl-circle::before {
+  #engage-courusel .owl-wrapper-outer::before {
+    right: 0; }
+  #engage-courusel .owl-circle {
     right: 0; }
   #engage-courusel .owl-circle-link {
     margin-right: 0; }
@@ -6704,7 +6712,7 @@ img.certificate-image {
     font: normal 11px Arial, sans-serif;
     color: #666; }
 
-.width > .audience-wrapper, .zone-content > .audience-wrapper, #layout-footer > .audience-wrapper, #engage-courusel .owl-wrapper-outer > .audience-wrapper, .widget-BlogSearch > .audience-wrapper, .widget-TagCloud > .audience-wrapper, .breadcrumb > .audience-wrapper, .page-techer__title > .audience-wrapper {
+.width > .audience-wrapper, .zone-content > .audience-wrapper, #layout-footer > .audience-wrapper, .widget-BlogSearch > .audience-wrapper, .widget-TagCloud > .audience-wrapper, .breadcrumb > .audience-wrapper, .page-techer__title > .audience-wrapper {
   padding-top: 70px; }
 
 .audience-wrapper {
@@ -9742,7 +9750,7 @@ a[href*="&&_FILES"] {
     width: 495px; } }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .width, .zone-content, #layout-footer, #engage-courusel .owl-wrapper-outer, .widget-BlogSearch, .widget-TagCloud, .breadcrumb, .page-techer__title {
+  .width, .zone-content, #layout-footer, .widget-BlogSearch, .widget-TagCloud, .breadcrumb, .page-techer__title {
     padding: 0; }
   .page-techer__title {
     font-size: 22px;
@@ -9849,7 +9857,7 @@ a[href*="&&_FILES"] {
   font: normal 16px/1.5 Arial, sans-serif; }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .width, .zone-content, #layout-footer, #engage-courusel .owl-wrapper-outer, .widget-BlogSearch, .widget-TagCloud, .breadcrumb, .page-techer__title {
+  .width, .zone-content, #layout-footer, .widget-BlogSearch, .widget-TagCloud, .breadcrumb, .page-techer__title {
     padding: 0 10px; }
   .caption-page {
     padding-top: 35px;

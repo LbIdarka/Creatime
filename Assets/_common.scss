@@ -35,20 +35,18 @@ sup a {
 #engage-courusel {
 
     position: relative;
-    width: 100%;
-    background-color: rgb(249,209,47);
+    overflow: hidden;
 
     .owl-wrapper-outer {
         position: relative;
-        @extend .width;
-        padding-bottom: 40px;
         overflow: hidden;
+        background-color: rgb(249,209,47);
         
         &::before {
             content: "";
             position: absolute;
             top: -75px;
-            right: 12%;
+            right: 23%;
             width: 160px;
             height: 160px;
             border-radius: 50%;
@@ -57,8 +55,11 @@ sup a {
     }
     
     .owl-circle {
-        float: right;
-        width: 50%;
+        position: absolute;
+        top: 0;
+        right: 22%;
+        width: 370px;
+        height: 332px;
 
         &::before {
             content: "";
@@ -73,14 +74,14 @@ sup a {
     }
 
     .owo-text {
-        position: relative;
-        display: block;
-        width: 370px;
-        margin-top: 30%;
-        padding-left: 65px;
         font: normal 20px "FiraSans", sans-serif;
+        position: absolute;
+        width: 370px;
+        top: 45%;
+        left: -10%;
         text-align: center;
         color: #fff;
+        padding-left: 65px;
         text-transform: uppercase;
 
         @include w762 {
@@ -106,11 +107,10 @@ sup a {
     }
 
     .owl-circle-link {
-        position: relative;
-        float: right;
+        position: absolute;
+        bottom: 30px;
+        right: -20px;
         width: 160px;
-        margin-top: 70px;
-        margin-right: 50px;
         font: normal 14px "FiraSans", sans-serif;
         text-align: center;
         color: #fff;
@@ -132,30 +132,34 @@ sup a {
         z-index: -1;
         }
     }
-
-    .owl-item {
-        float: left;
-        display: none;
-        width: 50%;
-    }
-
-    .owl-item-active {
-        display: block;
-    }
     
     .owl-slide {
+        height: 332px;
+        list-style: none;
         margin: 0;
-        margin-left: 85px;
         padding: 0;
         text-align: center;
     }
 
     .owl-slide p {
         width: 300px;
-        margin: 0;
-        padding-top: 80px;
+        max-width: 100%;
+        position: relative;
+        /*top: 100px;*/
+         top: 80px;
+        left: 23%;
+        margin-top: 0;
         font-size: 18px;
         text-align:left;
+
+        @include w1125 {
+            left: 10%;
+        }
+
+        @include w762 {
+            margin: auto;
+            left: 0;
+        }
     }
 
     .owl-controls {
@@ -233,8 +237,11 @@ sup a {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1000px) {
-    #engage-courusel .owl-wrapper-outer::before,
-    #engage-courusel .owl-circle::before {
+    #engage-courusel .owl-wrapper-outer::before {
+        right: 0;
+    }
+
+    #engage-courusel .owl-circle {
         right: 0;
     }
 
