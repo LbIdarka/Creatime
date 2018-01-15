@@ -4804,7 +4804,7 @@ sup a {
       height: 160px;
       border-radius: 50%;
       background-color: #ff830f; }
-  #engage-courusel .owl-wrapper {
+  #engage-courusel .owl-inner {
     float: left;
     width: 50%; }
   #engage-courusel .owl-circle {
@@ -4887,7 +4887,7 @@ sup a {
   #engage-courusel .owl-controls {
     position: absolute;
     bottom: 40px;
-    left: 13%; }
+    left: 25%; }
     @media only screen and (max-width: 1125px) {
       #engage-courusel .owl-controls {
         left: 10%; } }
